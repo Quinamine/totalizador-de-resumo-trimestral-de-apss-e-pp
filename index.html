@@ -1,0 +1,616 @@
+<!doctypehtml>
+<html dir=ltr lang=pt-MZ id="root">
+    <meta charset=UTF-8>
+    <meta content="IE=edge" http-equiv=X-UA-Compatible>
+    <meta content="width=device-width,initial-scale=1" name=viewport>
+    <title>Totalizador de Resumo Trimestral de APSS/PP</title>
+    <meta content="index, follow" name=robots>
+    <meta content="Serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo trimestral de APSS/PP, por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo trimestral de APSS/PP actualmente vigente no Serviço Nacional de Saúde em Moçambique." name=description>
+    <meta content="Totalizador de Resumo Trimestral de APSS/PP, Programa de Reabilitação Nutricional para Pacientes ≥ 15 Anos, Totalizador de Relatório Trimestral de APSS/PP, Ficha de Resumo Trimestral de APSS/PP." name=keywords>
+    <meta content="Adérito Félix Quinamine" name=author>
+    <meta content=https://quinamine.github.io/totalizador-de-resumo-trimestral-de-apss-e-pp/index.html property=og:url>
+    <meta content="Totalizador de Resumo Trimestral de APSS/PP" property=og:title>
+    <meta content="Serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo trimestral de APSS/PP, por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo trimestral de APSS/PP actualmente vigente no Serviço Nacional de Saúde em Moçambique." property=og:description>
+    <meta content=https://quinamine.github.io/totalizador-de-resumo-trimestral-de-apss-e-pp/imagens/totalizador-de-resumo-trimestral-de-apss-e-pp.png property=og:image>
+    <link href=favicon.ico rel="shortcut icon" type=image/x-icon>
+    <link href=anatomia/reset.css rel=stylesheet>
+    <link href=anatomia/layout.css rel=stylesheet>
+    <link href=anatomia/ficha.css rel=stylesheet>
+    <script src="fisiologia/menu.js"></script>
+    <script src="fisiologia/main.js"></script>
+    <script src="fisiologia/multifuncoes.js"></script>
+    <script src="fisiologia/db.js"></script>
+    <script src="fisiologia/referencia.js"></script>
+    
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-6DVBGJL33D" async></script>
+    <script>
+        function gtag() {
+            dataLayer.push(arguments)
+        }
+        window.dataLayer = window.dataLayer || [],
+        gtag("js", new Date),
+        gtag("config", "G-6DVBGJL33D")
+    </script>
+    <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do Totalizador. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
+
+    <body class="body" ontouchstart="">
+        <header class="header --no-print">
+            <div class="layout-row header__row --display-flex-y-center">
+                <a href=index.html class=header__logo>
+                    Totalizador de Resumo <span class="logo__span--hide-on-screen-s">Trimestral</span>
+                    de APSS<span class="logo__sigla-pp">/PP</span>
+                </a>
+                <div role="navigation" class="header__nav --display-flex-y-center">
+                    <ul class="header__nav__ul --display-flex-y-center">
+                        <li class="header__nav__li header__nav__li--realcartotais">
+                            <input type=checkbox id="checkbox-realcar-totais" class="header__checkbox header__child--cursor">
+                            <label for="checkbox-realcar-totais" class="header__nav__label --display-flex-y-center header__child--cursor">
+                                Realçar&nbsp;totais
+                            </label>
+                        <li class="header__nav__li">
+                            <button class="header__nav__btn header__nav__btn--ir-para">Ir para a linha...</button>
+                        <li class="header__nav__li">
+                            <button class="header__nav__btn header__nav__btn--esvaziar-ficha">Esvaziar ficha</button>
+                        <li class="header__nav__li">
+                            <button class="header__nav__btn header__nav__btn--imprimir">
+                                <span class="--hide-on-mobile header__child--cursor">Imprimir</span>
+                                <span class="--hide-on-desktop header__child--cursor">Salvar&nbsp;como&nbsp;PDF</span>
+                            </button>
+                        <li class="header__nav__li header__li--hide-on-mobile">
+                            <button class="header__nav__btn header__nav__btn--sobre">Sobre</button>
+                        <li class="header__nav__li">
+                            <button class="header__nav__btn header__nav__btn--ajuda">
+                                Ajuda
+                            </button>
+                        <li class="header__nav__li header__li--hide-on-desktop">
+                            <button class="header__nav__btn header__nav__btn--partilhar">Partilhar...</button>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="ficha">
+                <header>
+                    <div class="ficha__linha-de-emblema-e-titulo">
+                        <div class="ficha__col-de-emblema">
+                            <figure>
+                                <img src="imagens/emblema.png" alt="Emblema da República de Moçambique" class="ficha__emblema" />
+                            </figure>
+                            <span class="ficha__span-descricao-de-emblema">República de Moçambique</span>
+                            <span class="ficha__span-descricao-de-emblema">Ministério da Saúde</span>
+                            <span class="ficha__span-descricao-de-emblema">Serviço Nacional de Saúde</span>
+                        </div>
+                        <div class="ficha__col-de-titulo">
+                            <h1 class="ficha__titulo">Resumo Trimestral das Actividades de Apoio<br/> Psicossocial e Prevenção Positiva</h1>
+                            <span class="ficha__span-mod-sis-h05"><b>Mod. SIS H05</b></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Geolocalização -->
+                    <div class="ficha__linha-de-endereco">
+                        <div class="ficha__linha-de-endereco__col ficha__linha-de-endereco__col--provincia">
+                            <label for="input-provincia">Província</label>
+                            <input type="text" name="provincia" id="input-provincia" list="datalist-provincias" class="input-nao-celular --fw-700 --border-t --border-b --border-l" />
+                            <datalist id="provincias"></datalist>
+                        </div>
+                        <div class="ficha__linha-de-endereco__col ficha__linha-de-endereco__col--distrito">
+                            <label for="input-distrito">Distrito</label>
+                            <input type="text" name="distrito" id="input-distrito" list="datalist-distritoss" class="input-nao-celular --fw-700 --border-t --border-b --border-l" />
+                            <datalist id="distritos"></datalist>
+                        </div>
+                        <div class="ficha__linha-de-endereco__col ficha__linha-de-endereco__col--us">
+                            <label for="input-us">Unidade Sanitária</label>
+                            <input type="text" name="us" id="input-us" list="datalist-us" class="input-nao-celular --fw-700 --border-t --border-b --border-l" />
+                            <datalist id="datalist-us"></datalist>
+                        </div>
+                        <div class="ficha__linha-de-endereco__col ficha__linha-de-endereco__col--ano">
+                            <label for="input-ano">Ano</label>
+                            <input type="number" name="ano" id="input-ano" list="datalist-ano" class="input-nao-celular --fw-700 --border" />
+                            <datalist id="datalist-ano"></datalist>
+                        </div>
+                    </div>
+                </header>
+                <div class="ficha__body">
+                    <header class="ficha__body__header">
+                        <div class="ficha__header__col-com-titulo-linhas --display-flex-xy-center  --border-t-thick --border-b-thick --border-l-thick">
+                            <b>L</b>
+                            <b>I</b>
+                            <b>N</b>
+                            <b>H</b>
+                            <b>A</b>
+                            <b>S</b>
+                            <svg style="width: 38px; height: 17px;">
+                                <polygon points="13,0 26,0 19,13" stroke-width="1.5px" stroke="#444" fill="transparent"></polygon>
+                            </svg>
+                            
+                        </div>
+                        <div class="ficha__header__col-com-titulo-colunas-e-periodo --border-t-thick --border-b-thick --border-l-thick">
+                            <div class="ficha__header__box-de-titulo-colunas --border-b-thick">
+                                <b>COLUNAS</b> 
+                                <svg style="width: 20px; height: 17px;">
+                                    <polygon points="7,0 20,6.5 7,13" stroke-width="1.5px" stroke="#444" fill="transparent"></polygon>
+                                </svg>
+                            </div>
+                            <div class="ficha__header__box-periodo-de-reporte">
+                                <label for="reporte__mes-inicial" class="--fw-700">Período de Reporte</label>
+                                <div class="box-periodo-de-reporte__col-de-inputs">
+
+                                    <input type="text" id="reporte__mes-inicial" class="input-nao-celular --fw-700 --border-b" />
+
+                                    <span>/</span>
+
+                                    <input type="number" class="input-nao-celular --fw-700 --border-b" />
+
+                                    <span>&hyphen;</span>
+
+                                    <input type="text" class="input-nao-celular --fw-700 --border-b" />
+
+                                    <span>/</span>
+                                    <input type="number" class="input-nao-celular --fw-700 --border-b" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ficha__header__col-de-nums-de-colunas ficha__header__col-de-nums-de-colunas--123 --border-t-thick --border-b-thick">
+                            <div class="ficha__grid-template-cols-3 numero-das-colunas --border-b-thick">
+                                <span class="--display-flex-xy-center --border-l-thick">1</span>
+                                <span class="--display-flex-xy-center --border-l-thick">2</span>
+                                <span class="--display-flex-xy-center --border-l-thick">3</span>
+                            </div>
+                            <div class="--display-flex-xy-center --border-b-thick --border-l-thick">
+                                <span>0-14 anos</span>
+                            </div>
+                            <div class="ficha__grid-template-cols-3 de-sexo">
+                                <span class="--display-flex-xy-center --border-l-thick">Masc.</span>
+                                <span class="--display-flex-xy-center --border-l-thick">Fem.</span>
+                                <span class="--display-flex-xy-center --border-l-thick">Total<br/>Grupo</span>
+                            </div>		
+                        </div>
+                        <div class="ficha__header__col-de-nums-de-colunas ficha__header__col-de-nums-de-colunas--456 --border-t-thick --border-b-thick">
+                            <div class="ficha__grid-template-cols-3 --border-b-thick">
+                                <span class="--display-flex-xy-center --border-l-thick">4</span>
+                                <span class="--display-flex-xy-center --border-l-thick">5</span>
+                                <span class="--display-flex-xy-center --border-l-thick">6</span>
+                            </div>
+                            <div class="--display-flex-xy-center --border-b-thick">
+                                <span>15/+ anos</span>
+                            </div>
+                            <div class="ficha__grid-template-cols-3">
+                                <span class="--display-flex-xy-center --border-l-thick">Masc.</span>
+                                <span class="--display-flex-xy-center --border-l-thick">Fem.</span>
+                                <span class="--display-flex-xy-center --border-l-thick">Total<br/>Grupo</span>
+                            </div>		
+                        </div>
+                        <div class="ficha__header__col-de-total --border-thick">
+                            <div class="--display-flex-xy-center --border-b-thick">
+                                <span>7</span>
+                            </div>
+                            <div class="--display-flex-xy-center">
+                                <span>TOTAL GERAL</span>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="ficha__body__grid-template-cols-10">
+                        <div class="ficha__col-de-pacotes-apss --border-t-thick --border-b-thick --border-l-thick">
+                            <div class="ficha__col-de-pacotes-apss__subcol --display-flex-xy-center">
+                                <span class="ficha__span--rotate">Revelação<br> Total do<br/> Diagnóstico</span>
+                            </div>
+                            <div class="ficha__col-de-pacotes-apss__subcol --display-flex-xy-center --border-t-thick">
+                                <span class="ficha__span--rotate">Sessões&nbsp;de&nbsp;APSS&nbsp;e&nbsp;PP</span>
+                            </div>
+                            <div class="ficha__col-de-pacotes-apss__subcol --display-flex-xy-center --border-t-thick">
+                                <span class="ficha__span--rotate">Pacote<br/> Completo PP</span>
+                            </div>
+                            <div class="ficha__col-de-pacotes-apss__subcol --display-flex-xy-center --border-t-thick">
+                                <span class="ficha__span--rotate ">Chamadas&nbsp;e&nbsp;Visitas&nbsp;Domiciliares</span>
+                            </div>
+                        </div>
+                        <div class="ficha__col-de-nums-de-linhas --border-b-thick --border-l-thick --fw-700">
+                            <div class="--display-flex-xy-center">
+                                <span>A1</span>
+                            </div>
+                            <div class="--display-flex-xy-center --border-t-thick">
+                                <span>B1</span>
+                            </div>
+                            <div class="--display-flex-xy-center --border-t-thick"> 
+                                <span>C1</span>
+                            </div>
+                            <div class="--display-flex-xy-center --border-t-thick">
+                                <span>D1</span>
+                            </div> 
+                            <div class="--display-flex-xy-center --border-t-thick">
+                                <span>E1</span>
+                            </div>
+                            <div class="--display-flex-xy-center --border-t-thick">
+                                <span>E2</span>
+                            </div>
+                            <div class="--display-flex-xy-center --border-t-thick">
+                                <span>E3</span>
+                            </div>
+                        </div>
+                        <div class="ficha__col-de-indicadores --border-b-thick --border-l-thick">
+                            <div class="--display-flex-y-center">
+                                <span>N<sup>o</sup> de crianças e adolescentes de 8-14<br/> anos que receberam revelação total do<br/> diagnóstico <em>durante o trimestre</em></span>
+                            </div>
+                            <div class="--display-flex-y-center --border-t-thick">
+                                <span>N<sup>o</sup> de pacientes que iniciou cuidados<br/> HIV nesta unidade sanitária <em>durante o<br/> trimestre</em> e que receberam<br/> aconselhamento Pré-TARV <em>no mesmo<br/> período</em></span>
+                            </div>
+                            <div class="--display-flex-y-center --border-t-thick">
+                                <span>N<sup>o</sup> total de pacientes activos em TARV<br/> que receberam seguimento de adesão <em>durante o trimestre</em></span>
+                            </div>
+                            <div class="--display-flex-y-center --border-t-thick">
+                                <span>N<sup>o</sup> de pacientes que iniciou TARV (15/+<br/> anos) nesta unidade sanitária <em>no<br/> trimestre anterior</em> e que receberam o<br/> pacote completo de prevenção positiva<br/> <em>até ao período de reporte</em></span>
+                            </div>
+                            <div class="--display-flex-y-center --border-t-thick">
+                                <span>N<sup>o</sup> de pacientes faltosos e abandonos<br/> referidos para chamadas e/ou visitas de<br/> reintegração <em>durante o trimestre</em></span>
+                            </div>
+                            <div class="--display-flex-y-center --border-t-thick">
+                                <span>N<sup>o</sup> de pacientes faltosos e abandonos<br/> contactados e/ou encontrados <em>durante<br/> o trimestre</em> , (dos referidos no mesmo período)</span>
+                            </div>
+                            <div class="--display-flex-y-center --border-t-thick">
+                                <span>N<sup>o</sup> de pacientes faltosos e abandonos<br/> que retornaram a unidade sanitária<br/> <em>durante o trimestre</em> , (dos contactos<br/> e/ou encontrados no mesmo período)</span>
+                            </div>
+                        </div>
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs-0-14-anos-m --border-b-thick --border-l-thick">
+                            <input type="number" name="l1-c1" id="l1-c1" min="0" data-totalgrupo="l1-c1c2" data-totalgrupooutput="l1-c3" data-totalgeral="l1-c1c2" data-totalgeraloutput="l1-c7"/>
+    
+                            <input type="number" name="l2-c1" id="l2-c1" min="0" data-totalgrupo="l2-c1c2" data-totalgrupooutput="l2-c3" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick" />
+    
+                            <input type="number" name="l3-c1" id="l3-c1" min="0" data-totalgrupo="l3-c1c2" data-totalgrupooutput="l3-c3" data-totalgeral="l3-c1c2c4c5" data-totalgeraloutput="l3-c7" class="--border-t-thick" />
+    
+                            <div class="celula-n-a"></div>
+    
+                            <input type="number" name="l5-c1" id="l5-c1" min="0" data-totalgrupo="l5-c1c2" data-totalgrupooutput="l5-c3" data-totalgeral="l5-c1c2c4c5" data-totalgeraloutput="l5-c7" class="--border-t-thick" />
+    
+                            <input type="number" name="l6-c1" id="l6-c1" min="0" data-totalgrupo="l6-c1c2" data-totalgrupooutput="l6-c3" data-totalgeral="l6-c1c2c4c5" data-totalgeraloutput="l6-c7" class="--border-t-thick" />
+    
+                            <input type="number" name="l7-c1" id="l7-c1" min="0" data-totalgrupo="l7-c1c2" data-totalgrupooutput="l7-c3" data-totalgeral="l7-c1c2c4c5" data-totalgeraloutput="l7-c7" class="--border-t-thick" />
+                            
+                        </div>
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs-0-14-anos-f --border-b-thick">
+                            <input type="number" name="l1-c1" id="l1-c1" min="0" data-totalgrupo="l1-c1c2" data-totalgrupooutput="l1-c3" data-totalgeral="l1-c1c2" data-totalgeraloutput="l1-c7" class="--border-l-thick" />
+    
+                            <input type="number" name="l2-c1" id="l2-c1" min="0" data-totalgrupo="l2-c1c2" data-totalgrupooutput="l2-c3" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick --border-l-thick" />
+    
+                            <input type="number" name="l3-c1" id="l3-c1" min="0" data-totalgrupo="l3-c1c2" data-totalgrupooutput="l3-c3" data-totalgeral="l3-c1c2c4c5" data-totalgeraloutput="l3-c7" class="--border-t-thick --border-l-thick" />
+    
+                            <div class="celula-n-a"></div>
+    
+                            <input type="number" name="l5-c1" id="l5-c1" min="0" data-totalgrupo="l5-c1c2" data-totalgrupooutput="l5-c3" data-totalgeral="l5-c1c2c4c5" data-totalgeraloutput="l5-c7" class="--border-t-thick --border-l-thick" />
+    
+                            <input type="number" name="l6-c1" id="l6-c1" min="0" data-totalgrupo="l6-c1c2" data-totalgrupooutput="l6-c3" data-totalgeral="l6-c1c2c4c5" data-totalgeraloutput="l6-c7" class="--border-t-thick --border-l-thick" />
+    
+                            <input type="number" name="l7-c1" id="l7-c1" min="0" data-totalgrupo="l7-c1c2" data-totalgrupooutput="l7-c3" data-totalgeral="l7-c1c2c4c5" data-totalgeraloutput="l7-c7" class="--border-t-thick --border-l-thick" />
+                        </div>
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs-0-14-anos-total --border-b-thick">
+                            <input type="number" readonly class="l1-c3 --border-l-thick"/>
+                            <input type="number" readonly class="l2-c3 --border-t-thick --border-l-thick"/>
+                            <input type="number" readonly class="l3-c3 --border-t-thick --border-l-thick"/>
+                            <div class="celula-n-a"></div>
+                            <input type="number" readonly class="l5-c3 --border-t-thick --border-l-thick"/>
+                            <input type="number" readonly class="l6-c3 --border-t-thick --border-l-thick"/>
+                            <input type="number" readonly class="l7-c3 --border-t-thick --border-l-thick"/>
+                        </div>
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-anos-m --border-b-thick --border-l-thick">
+                            <div class="celula-n-a"></div>
+    
+                            <input type="number" name="l2-c4" id="l2-c4" min="0" data-totalgrupo="l2-c4c5" data-totalgrupooutput="l2-c6" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick" />
+    
+                            <input type="number" name="l3-c4" id="l3-c4" min="0" data-totalgrupo="l3-c4c5" data-totalgrupooutput="l3-c6" data-totalgeral="l3-c1c2c4c5" data-totalgeraloutput="l3-c7" class="--border-t-thick" />
+    
+                            <input type="number" name="l4-c4" id="l4-c4" min="0" data-totalgrupo="l4-c4c5" data-totalgrupooutput="l4-c6" data-totalgeral="l4-c1c2c4c5" data-totalgeraloutput="l4-c7" class="--border-t-thick" />
+    
+                            <input type="number" name="l5-c4" id="l5-c4" min="0" data-totalgrupo="l5-c4c5" data-totalgrupooutput="l5-c6" data-totalgeral="l5-c1c2c4c5" data-totalgeraloutput="l5-c7" class="--border-t-thick" />
+    
+                            <input type="number" name="l6-c4" id="l6-c4" min="0" data-totalgrupo="l6-c4c5" data-totalgrupooutput="l6-c6" data-totalgeral="l6-c1c2c4c5" data-totalgeraloutput="l6-c7" class="--border-t-thick" />
+    
+                            <input type="number" name="l7-c4" id="l7-c4" min="0" data-totalgrupo="l7-c4c5" data-totalgrupooutput="l7-c6" data-totalgeral="l7-c1c2c4c5" data-totalgeraloutput="l7-c7" class="--border-t-thick" />
+                        </div>
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-f --border-b-thick">
+                            <div class="celula-n-a"></div>
+    
+                            <input type="number" name="l2-c4" id="l2-c4" min="0" data-totalgrupo="l2-c4c5" data-totalgrupooutput="l2-c6" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick --border-l-thick" />
+    
+                            <input type="number" name="l3-c4" id="l3-c4" min="0" data-totalgrupo="l3-c4c5" data-totalgrupooutput="l3-c6" data-totalgeral="l3-c1c2c4c5" data-totalgeraloutput="l3-c7" class="--border-t-thick --border-l-thick" />
+    
+                            <input type="number" name="l4-c4" id="l4-c4" min="0" data-totalgrupo="l4-c4c5" data-totalgrupooutput="l4-c6" data-totalgeral="l4-c1c2c4c5" data-totalgeraloutput="l4-c7" class="--border-t-thick --border-l-thick" />
+    
+                            <input type="number" name="l5-c4" id="l5-c4" min="0" data-totalgrupo="l5-c4c5" data-totalgrupooutput="l5-c6" data-totalgeral="l5-c1c2c4c5" data-totalgeraloutput="l5-c7" class="--border-t-thick --border-l-thick" />
+    
+                            <input type="number" name="l6-c4" id="l6-c4" min="0" data-totalgrupo="l6-c4c5" data-totalgrupooutput="l6-c6" data-totalgeral="l6-c1c2c4c5" data-totalgeraloutput="l6-c7" class="--border-t-thick --border-l-thick" />
+    
+                            <input type="number" name="l7-c4" id="l7-c4" min="0" data-totalgrupo="l7-c4c5" data-totalgrupooutput="l7-c6" data-totalgeral="l7-c1c2c4c5" data-totalgeraloutput="l7-c7" class="--border-t-thick --border-l-thick" />
+                        </div>
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-anos-total --border-b-thick">
+                            <div class="celula-n-a"></div>
+                            <input type="number" readonly class="l2-c6 --border-t-thick --border-l-thick"/>
+                            <input type="number" readonly class="l3-c6 --border-t-thick --border-l-thick"/>
+                            <input type="number" readonly class="l4-c6 --border-t-thick --border-l-thick"/>
+                            <input type="number" readonly class="l5-c6 --border-t-thick --border-l-thick"/>
+                            <input type="number" readonly class="l6-c6 --border-t-thick --border-l-thick"/>
+                            <input type="number" readonly class="l7-c6 --border-t-thick --border-l-thick"/>
+                        </div>
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs--total-geral --border-r-thick --border-b-thick  --border-l-thick">
+                            <input type="number" readonly class="l1-c7 "/>
+                            <input type="number" readonly class="l2-c7 --border-t-thick"/>
+                            <input type="number" readonly class="l3-c7 --border-t-thick"/>
+                            <input type="number" readonly class="l4-c7 --border-t-thick"/>
+                            <input type="number" readonly class="l5-c7 --border-t-thick"/>
+                            <input type="number" readonly class="l6-c7 --border-t-thick"/>
+                            <input type="number" readonly class="l7-c7 --border-t-thick"/>
+                        </div>
+                    </div>
+                </div>
+                <footer class="ficha__rodape">
+                    <div class="ficha__rodape__col">
+                        <label for="input-nome">Elaborado por (Nome)</label>
+                        <input type="text"id="input-nome" class="ficha__rodape__input-nome input-nao-celular --fw-700 --border-b" />
+                    </div>
+                    <div class="ficha__rodape__col">
+                        <label for="input-assinatura">Assinatura</label>
+                        <input type="text" id="input-assinatura" class="ficha__rodape__input-assinatura input-nao-celular --fw-700 --border-b" />
+                    </div>	
+                    <div class="ficha__rodape__col">
+                        <label for="input-data">Data de Elaboração (DD/MM/AA)</label>
+                        <input type="date" id="input-data" class="ficha__rodape__input-data input-nao-celular --fw-700 --border-b"/>
+                    </div>	 
+                </footer>
+                <p class="ficha__rodape__nota-de-preenchimento"><strong>NOTA:</strong> Normas de preenchimento do Resumo Trimestral no verso.</p>
+            </div>
+
+            <div class="main__container-de-campo-de-nota layout-row">
+                <textarea class="main__campo-de-nota input-nao-celular" id="input-comentarios" placeholder="Comentários sobre o resumo (S.O.S)..." rows=3></textarea>
+            </div>
+
+            <div class="reference-container">
+                <div class="layout-row reference-row">
+                    <span class="reference-row__label">Indicador:</span> 
+                    <output class="reference-row__output reference-row__output--indicador --display-flex-y-center"></output>
+
+                    <span class="reference-row__label">Faixa etária:</span> 
+                    <output class="reference-row__output reference-row__output--idade --display-flex-xy-center --fw-700"></output>
+
+                    <span class="reference-row__label">Sexo:</span> 
+                    <output class="reference-row__output reference-row__output--sexo --display-flex-xy-center --fw-700"></output>
+                </div>
+            </div>
+        </main>
+        
+        <section class="dialog-boxes --no-print">
+            <div class="dialog-box-default dialog-box-default--sobre-aqd">
+                <h3 class="dialog-box-default__title">Totalizador de Resumo Trimestral de APSS/PP</h3>
+                <p class="dialog-box-default__p">
+                    A utilização do totalizador é, de facto, uma garantia de um resumo correctamente totalizado, porém, isso simplesmente não define a qualidade do resumo. Você é o único responsável pela veracidade, lógica e concordância dos dados preenchidos e, portanto, pela qualidade do resumo. O totalizador só se limita a calcular os totais baseando-se exactamente nos dados que você fornece.
+                </p>
+                <div class="dialog-box-default__btn-container">
+                    <button class="dialog-box-default__btn dialog-box-default__btn--aqd">Entendi</button>
+                </div>
+            </div>
+
+            <div class="dialog-box-default dialog-box-default--small">
+                <h3 class="dialog-box-default__title">Totalizador de Resumo Trimestral de APSS/PP</h3>
+                <p class="dialog-box-default__p dialog-box-default__p--js-console --display-flex-y-center">
+                    
+                </p>
+                <div class="dialog-box-default__btn-container">
+                    <button class=dialog-box-default__btn>Fechar <span class="dialog-box-default__output-autoclose-loop"></span></button>
+                </div>
+            </div>
+
+            <div class="dialog-box-ir-para --display-flex-y-center">
+                <input type=text class=dialog-box-ir-para__input-linha max=63 placeholder="Referência da linha (ex.: C5)">
+                <button class="dialog-box-ir-para__btn-ir" title="Ir para a linha">Ir</button>
+                <button class=dialog-box-ir-para__btn-fechar title=Fechar>&times;</button>
+            </div>
+            <div class="dialog-box-esvaziar-ficha">
+                <h3 class="dialog-box-esvaziar-ficha__titulo --fw-700">Esvaziar ficha</h3>
+                <p>Tem certeza de que pretende esvaziar a ficha?
+                <div class=dialog-box-esvaziar-ficha__svg-container>
+                    <svg style=width:40px;height:40px>
+                        <linearGradient id=meuGradiente x1=0% x2=0% y1=0% y2=100%>
+                            <stop offset=0% style=stop-color:gray></stop>
+                            <stop offset=100% style=stop-color:#ff0></stop>
+                        </linearGradient>
+                        <polygon fill=url(#meuGradiente) points="20,0 40,40, 0,40" stroke=#333 stroke-width=1></polygon>
+                        <text style=font-weight:700;font-size:28px x=15.335 y=35.5>!</text>
+                    </svg>
+                    <p class="dialog-box-esvaziar-ficha__last-p">Esta acção não pode ser desfeita.
+                </div>
+                <h4 class="dialog-box-esvaziar-ficha__titulo --fw-700">Dados adicionais</h4>
+                <ul class=dialog-box-esvaziar-ficha__ul-dados-adicionais>
+                    <li>
+                        <input type=checkbox checked id="checkbox-prov" data-inputadicionalid=input-provincia>
+                        <label for=checkbox-prov>Província</label>
+                    <li>
+                        <input type=checkbox checked id="checkbox-distrito" data-inputadicionalid=input-distrito>
+                        <label for=checkbox-distrito>Distrito</label>
+                    <li>
+                        <input type=checkbox checked id="checkbox-us" data-inputadicionalid=input-us>
+                        <label for=checkbox-us>US</label>
+                    <li>
+                        <input type=checkbox id=checkbox-mes checked data-inputadicionalid=input-mes>
+                        <label for=checkbox-mes>Mês</label>
+                    <li>
+                        <input type=checkbox id=checkbox-data checked data-inputadicionalid=input-data>
+                        <label for=checkbox-data>Data</label>
+                    <li>
+                        <input type=checkbox id=checkbox-assinatura checked data-inputadicionalid=input-assinatura>
+                        <label for=checkbox-assinatura>
+                            Assinatura
+                        </label>
+                    <li>
+                        <input type=checkbox id=checkbox-comentarios checked data-inputadicionalid=input-comentarios>
+                        <label for=checkbox-comentarios>Comentários</label>
+                </ul>
+                <div class=dialog-box-esvaziar-ficha__btns-container>
+                    <button class="dialog-box-esvaziar-ficha__btn dialog-box-esvaziar-ficha__btn--cancelar">Cancelar</button>
+                    <button class="dialog-box-esvaziar-ficha__btn dialog-box-esvaziar-ficha__btn--confirmar">Confirmar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sessao-de-artigos --no-print">
+            <article class="artigo artigo--sobre" id="sobre">
+                <h2 class="artigo__titulo artigo__titulo--nivel-1">Visão geral sobre o totalizador</h2>
+                <figure>
+                    <img alt="Totalizador de Resumo Trimestral de APSS/PP" src=imagens/totalizador-de-resumo-trimestral-de-apss-e-pp.png class="artigo__img artigo__img--sobre-o-tot">
+                </figure>
+                
+                <p>
+                    O <b>Totalizador de Resumo Trimestral de APSS/PP</b> é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo trimestral de APSS/PP (Apoio Psicossocial e Prevenção Positiva), por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo trimestral de APSS/PP actualmente vigente no Serviço Nacional de Saúde em Moçambique.
+                </p>
+
+                <h3 class="artigo__titulo artigo__titulo--nivel-2">Objectivos</h3>
+
+                <ul class="artigo__lista artigo__ul">
+                    <li>Calcular correcta e automaticamente os totais;</li>
+                    <li>Preencher automaticamente os totais nas células correspondentes;</li>
+                    <li>Minimizar possíveis erros de totalização, sobretudo por confusão (por exemplo, somar inadvertidamente células não correspondentes ou registar o total da linha A, na linha B);</li>
+                    <li >Expandir o acesso à ficha de resumo trimestral de APSS/PP.
+                </ul>
+
+                <h3 class="artigo__titulo artigo__titulo--nivel-2 ">O que eu preciso dispor para, e como utilizar o totalizador?</h3>
+
+                <ul class="artigo__lista artigo__ul">
+                    <li>Um telemóvel ou computador com acesso à internet;</li>
+                    <li>Ter colhido os dados de todos os indicadores da ficha nas fontes primárias (livro(s) de registo diário das actividades de apoio psicossocial e prevenção positiva) da sua Unidade Sanitária;</li>
+                    <li>E por fim, preencher os dados nas células correspondentes quanto ao indicador e as outras variáveis, e consequentemente os respectivos totais são, em tempo real, correcta e automaticamente calculados.</li>
+                </ul>
+
+                <p class="artigo__p--destaque">A utilização do totalizador é, de facto, uma garantia de um resumo correctamente totalizado, porém, isso simplesmente não define a qualidade do resumo. Você é o único responsável pela veracidade, lógica e concordância dos dados preenchidos e, portanto, pela qualidade do resumo. O totalizador só se limita a calcular os totais baseando-se exactamente nos dados que você fornece.</p>
+
+                <h3 class="artigo__titulo artigo__titulo--nivel-2">Qual é o destino dos dados que eu insiro?</h3>
+
+                <p>São guardados localmente (no navegador que estiver a usar), por meio de um recurso chamado <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API" target="_blank">Web Storage</a> e você tem total controle sobre esses, podendo mantê-los ou apagá-los por meio da opção "<b>Esvaziar ficha</b>" no menu do totalizador ou esvaziando o histórico (inclusíve os cookies) do seu navegador.</p>
+
+                <h3 class="artigo__titulo artigo__titulo--nivel-2">Vantagens do totalizador</h3>
+
+                <ul class="artigo__lista artigo__ul">
+                    <li>Calcula automaticamente os totais;</li>
+                    <li>Preenche automaticamente as células correspondentes aos totais;</li>
+                    <li>Fornece resultados (totais) exactos;</li>
+                    <li>Flexibiliza a elaboração do resumo;</li>
+                    <li>Pode ser impresso, inclusíve como uma simples ficha de resumo mensal;</li>
+                    <li >Pode ser guardado como PDF.</li>
+                </ul>
+
+                <h3 class="artigo__titulo artigo__titulo--nivel-2">Limitações do totalizador</h3>
+                    
+                <ul class="artigo__lista artigo__ul">
+                    <li>Não alerta sobre discrepância de dados, portanto, a análise da concordância dos dados é inteiramente dependente do usuário;</li>
+                    <li>Disponibilidade remota (é necessário um telemóvel ou computador com acesso à internet para ser acessado).</li>
+                </ul>
+                <button class="artigo__btn-fechar artigo__btn-fechar--sobre" title="Fechar">&times;</button>
+            </article>
+
+            <article class="artigo artigo--ajuda">
+                <h2 class="artigo__titulo artigo__titulo--nivel-1 artigo__titulo--border-b-thick">Ajuda e Procedimentos</h2>
+
+                <details>
+                    <summary>Realçar totais</summary>
+                    <p>Adiciona um fundo cinzento a todas as células dos totais. Estas têm o acesso interdito e a funcionalidade de realçá-las, permite facilmente distinguir estas de outras células. Muito útil em dispositivos móveis.</p>
+                </details>
+                <details>
+                    <summary >Ir para a linha...</summary>
+                    <p>Abre um campo no qual pode digitar um número de linha no formato <b>LETRANÚMERO</b> (ex.: <b>C5</b>) e, uma vez digitado o número, a página rola até a linha correspondente ao número.</p>
+                </details>
+                <details>
+                    <summary>Esvaziar ficha</summary>
+                    <p>Comando para limpar as células da ficha após a confirmação da acção na caixa de diálogo que abre.</p>
+                    
+                    <p>Permite também esvaziar campos adicionais (Província, Distrito, US, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando, desse modo, que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
+
+                    <figure class="details__moldura details__moldura--esvaziar-ficha">
+                        <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo de esvaziamento da ficha" class="artigo__img"/>
+
+                        <figcaption class="details__moldura__legenda"><b>Legenda:</b> Caixa de diálogo de esvaziamento da ficha. Neste caso, os campos de <b>Província, Distrito e Unidade Sanitária</b> seriam preservados (por ter suas checkboxes desmarcadas). Todos os outros cujas "checkboxes" estão marcadas, teriam seus campos esvaziados.</figcaption>
+                    </figure>
+
+                </details>
+                <details class="details-salvar-ficha-como-pdf">
+                    <summary>Salvar ficha como PDF</summary>
+                    <h3 class="artigo__titulo artigo__titulo--nivel-2 artigo__titulo--cor-discreta">No computador:</h3>
+                    <ol class="artigo__lista artigo__ol">
+                        <li>
+                            Clique na opção <mark>Imprimir</mark> no menu do totalizador.
+                        <li>
+                            Na janela que abrirá, no campo de <mark>Impressora</mark> ou <mark>Destino</mark>
+                            selecione a opção <mark>Salvar&nbsp;como&nbsp;PDF</mark>.
+                        <li >
+                            Por fim, clique em <mark>Salvar</mark> e escolha um destino no seu computador.
+                    </ol>
+
+                    <h3 class="artigo__titulo artigo__titulo--nivel-2 artigo__titulo--cor-discreta">No celular / tablet:</h3>
+                    <ol class="artigo__lista artigo__ol">
+                        <li>
+                            Toque na opção <mark>Salvar como PDF</mark> no cabeçalho do totalizador.
+                        </li>
+                        <li>
+                            Na janela seguinte, se não vir a opção <mark>Guardar como PDF</mark>, toque na seta <svg style="width: 24px; height: 18px;  border-radius: 4px; background-color: #dce4f4; position: relative; bottom: -5px;">
+                                <polygon points="6,6 18,6 12,12" fill="#888888"></svg> ao lado de <mark><b>Selec. impressora</b></mark> para expandir a opção.
+                        </li>
+
+                        <figure class="details__moldura">
+                            <img src="imagens/salvar-ficha-como-pdf-1.png" alt="Como salvar a ficha em PDF no celular" class="artigo__img" />
+                        </figure>
+                           
+                        <li>
+                          De seguida, selecione a opção <mark>Guardar como PDF</mark> e por fim, toque no simbolo de disquete e escolha um destino no seu celular para salvar o resumo.
+                        </li>
+
+                        <figure class="details__moldura">
+                            <img src="imagens/salvar-ficha-como-pdf-2.png" alt="Como salvar a ficha em PDF no celular" class="artigo__img" />
+                        </figure>
+                    </ol>
+                </details>
+                <details class="artigo__details-motivo-de-red-cells">
+                    <summary>Algumas células mudaram de cor de fundo para vermelho</summary>
+                    <p>As células do totalizador têm um tamanho para conter, visivelmente, 9 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">999999999</span>. Quando a célula recebe um número com mais de 9 algarismos, dá um alerta ao usuário ficando vermelha e, eventualmente, mostrando uma mensagem de texto com informação sobre a omissão dos algarismos e o real motivo.</p>
+
+                    <p class="artigo__p artigo__p--destaque">Para um país como Moçambique, em que o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que, actualmente, nenhuma Unidade Sanitária tem um número mensal de dados, de algum indicador de qualquer que seja a sua natureza, acima de <span class="number-format">999999999</span>.</p>
+                </details>
+                <button class="artigo__btn-fechar artigo__btn-fechar--ajuda" title="Fechar">&times;</button>
+            </article>
+        </section>
+        <footer class="footer --no-print">
+            <div class="layout-row footer__row">
+                <nav class=footer__nav>
+                    <h4 class="footer__nav__title">Hiperligações para outros serviços afins</h4>
+                    <ul>
+                        <li>
+                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-tuberculose/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Tuberculose</a>
+                        <li>
+                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-consultas/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Consultas</a>
+                        <li>
+                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de HIV/SIDA</a>
+                        <li>
+                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-malaria/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de Malária</a>
+                        <li>
+                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prn-ii/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Trimestral de PRN II</a>
+                        <li>
+                            <a href=https://quinamin.github.io/totalizador-de-resumo-mensal-de-prn-i/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de PRN I</a>
+                        <li>
+                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-saaj/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de SAAJ</a>
+                        <li>
+                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ccd/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de CCD</a>
+                        <li>
+                            <a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-ats/index.html target=_blank class="footer__nav__link">Totalizador de Resumo Mensal de ATS</a>
+                        <li>
+                            <a href=https://quinamine.github.io/calculadora-de-doses-pediatricas/index.html target=_blank class="footer__nav__link">Calculadora de Doses Pediátricas</a>
+                        <li>
+                            <a href=https://quinamine.github.io/tarv-pediatrico/index.html target=_blank class="footer__nav__link">Doseador de Antirretrovirais</a>
+                        <li>
+                            <a href=https://quinamin.github.io/requisicao-balancete/index.html target=_blank class="footer__nav__link">Requisição/Balancete</a>
+                    </ul>
+                </nav>
+                <p class="footer__p footer__p--created-by">
+                    Criado com atenção e 💙 por <a href=https://quinamine.github.io/aderito-felix-quinamine/index.html title="Acessar biografia &raquo;">Adérito Félix Quinamine</a>
+                    | © <span class="footer__current-year"></span> - Totalizador de Resumo Trimestral de APSS/PP
+                </p>
+                <a href=#root class=footer__link-back-to-top>Voltar ao topo</a>
+            </div>
+            <p class="footer__p footer__p--available-since">Disponível desde Março de 2024.</p>
+        </footer>
+        <div class="desfoque"></div>
+    </body>
+</html>

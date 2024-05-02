@@ -1,0 +1,2 @@
+# totalizador-de-resumo-trimestral-de-apss-e-pp
+Serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo trimestral de APSS/PP (Apoio Psicossocial e Prevenção Positiva), por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo trimestral de APSS/PP actualmente vigente no Serviço Nacional de Saúde em Moçambique.
