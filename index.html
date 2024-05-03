@@ -91,12 +91,12 @@
                         <div class="ficha__linha-de-endereco__col ficha__linha-de-endereco__col--provincia">
                             <label for="input-provincia">Província</label>
                             <input type="text" name="provincia" id="input-provincia" list="datalist-provincias" class="input-nao-celular --fw-700 --border-t --border-b --border-l" />
-                            <datalist id="provincias"></datalist>
+                            <datalist id="datalist-provincias"></datalist>
                         </div>
                         <div class="ficha__linha-de-endereco__col ficha__linha-de-endereco__col--distrito">
                             <label for="input-distrito">Distrito</label>
-                            <input type="text" name="distrito" id="input-distrito" list="datalist-distritoss" class="input-nao-celular --fw-700 --border-t --border-b --border-l" />
-                            <datalist id="distritos"></datalist>
+                            <input type="text" name="distrito" id="input-distrito" list="datalist-distritos" class="input-nao-celular --fw-700 --border-t --border-b --border-l" />
+                            <datalist id="datalist-distritos"></datalist>
                         </div>
                         <div class="ficha__linha-de-endereco__col ficha__linha-de-endereco__col--us">
                             <label for="input-us">Unidade Sanitária</label>
@@ -258,7 +258,7 @@
     
                             <input type="number" name="l3-c1" id="l3-c1" min="0" data-totalgrupo="l3-c1c2" data-totalgrupooutput="l3-c3" data-totalgeral="l3-c1c2c4c5" data-totalgeraloutput="l3-c7" class="--border-t-thick" />
     
-                            <div class="celula-n-a"></div>
+                            <div class="celula-n-a" data-faixaetaria="0-14 anos"></div>
     
                             <input type="number" name="l5-c1" id="l5-c1" min="0" data-totalgrupo="l5-c1c2" data-totalgrupooutput="l5-c3" data-totalgeral="l5-c1c2c4c5" data-totalgeraloutput="l5-c7" class="--border-t-thick" />
     
@@ -274,7 +274,7 @@
     
                             <input type="number" name="l3-c1" id="l3-c1" min="0" data-totalgrupo="l3-c1c2" data-totalgrupooutput="l3-c3" data-totalgeral="l3-c1c2c4c5" data-totalgeraloutput="l3-c7" class="--border-t-thick --border-l-thick" />
     
-                            <div class="celula-n-a"></div>
+                            <div class="celula-n-a" data-faixaetaria="0-14 anos"></div>
     
                             <input type="number" name="l5-c1" id="l5-c1" min="0" data-totalgrupo="l5-c1c2" data-totalgrupooutput="l5-c3" data-totalgeral="l5-c1c2c4c5" data-totalgeraloutput="l5-c7" class="--border-t-thick --border-l-thick" />
     
@@ -286,7 +286,7 @@
                             <input type="number" readonly class="l1-c3 --border-l-thick"/>
                             <input type="number" readonly class="l2-c3 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l3-c3 --border-t-thick --border-l-thick"/>
-                            <div class="celula-n-a"></div>
+                            <div class="celula-n-a" data-faixaetaria="0-14 anos"></div>
                             <input type="number" readonly class="l5-c3 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l6-c3 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l7-c3 --border-t-thick --border-l-thick"/>
@@ -307,7 +307,7 @@
                             <input type="number" name="l7-c4" id="l7-c4" min="0" data-totalgrupo="l7-c4c5" data-totalgrupooutput="l7-c6" data-totalgeral="l7-c1c2c4c5" data-totalgeraloutput="l7-c7" class="--border-t-thick" />
                         </div>
                         <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-f --border-b-thick">
-                            <div class="celula-n-a"></div>
+                            <div class="celula-n-a" data-faixaetaria="&ge; 15 anos"></div>
     
                             <input type="number" name="l2-c4" id="l2-c4" min="0" data-totalgrupo="l2-c4c5" data-totalgrupooutput="l2-c6" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick --border-l-thick" />
     
@@ -322,7 +322,7 @@
                             <input type="number" name="l7-c4" id="l7-c4" min="0" data-totalgrupo="l7-c4c5" data-totalgrupooutput="l7-c6" data-totalgeral="l7-c1c2c4c5" data-totalgeraloutput="l7-c7" class="--border-t-thick --border-l-thick" />
                         </div>
                         <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-anos-total --border-b-thick">
-                            <div class="celula-n-a"></div>
+                            <div class="celula-n-a" data-faixaetaria="&ge; 15 anos"></div>
                             <input type="number" readonly class="l2-c6 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l3-c6 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l4-c6 --border-t-thick --border-l-thick"/>
@@ -398,7 +398,7 @@
             </div>
 
             <div class="dialog-box-ir-para --display-flex-y-center">
-                <input type=text class=dialog-box-ir-para__input-linha max=63 placeholder="Referência da linha (ex.: C5)">
+                <input type=text class=dialog-box-ir-para__input-linha max=63 placeholder="Referência da linha (ex.: E3)">
                 <button class="dialog-box-ir-para__btn-ir" title="Ir para a linha">Ir</button>
                 <button class=dialog-box-ir-para__btn-fechar title=Fechar>&times;</button>
             </div>
@@ -426,18 +426,19 @@
                         <label for=checkbox-distrito>Distrito</label>
                     <li>
                         <input type=checkbox checked id="checkbox-us" data-inputadicionalid=input-us>
-                        <label for=checkbox-us>US</label>
+                        <label for=checkbox-us>Unidade Sanitária</label>
                     <li>
-                        <input type=checkbox id=checkbox-mes checked data-inputadicionalid=input-mes>
-                        <label for=checkbox-mes>Mês</label>
+                        <input type=checkbox id=checkbox-ano checked data-inputadicionalid=input-ano>
+                        <label for=checkbox-ano>Ano</label>
                     <li>
-                        <input type=checkbox id=checkbox-data checked data-inputadicionalid=input-data>
-                        <label for=checkbox-data>Data</label>
+                        <input type=checkbox id=checkbox-nome checked data-inputadicionalid=input-nome>
+                        <label for=checkbox-nome>Nome</label>
                     <li>
                         <input type=checkbox id=checkbox-assinatura checked data-inputadicionalid=input-assinatura>
-                        <label for=checkbox-assinatura>
-                            Assinatura
-                        </label>
+                        <label for=checkbox-assinatura>Assinatura</label>
+                    <li>
+                        <input type=checkbox id=checkbox-data checked data-inputadicionalid=input-data>
+                        <label for=checkbox-data>Data de Elaboração</label>
                     <li>
                         <input type=checkbox id=checkbox-comentarios checked data-inputadicionalid=input-comentarios>
                         <label for=checkbox-comentarios>Comentários</label>
@@ -498,7 +499,6 @@
                     
                 <ul class="artigo__lista artigo__ul">
                     <li>Não alerta sobre discrepância de dados, portanto, a análise da concordância dos dados é inteiramente dependente do usuário;</li>
-                    <li>Disponibilidade remota (é necessário um telemóvel ou computador com acesso à internet para ser acessado).</li>
                 </ul>
                 <button class="artigo__btn-fechar artigo__btn-fechar--sobre" title="Fechar">&times;</button>
             </article>
@@ -512,7 +512,7 @@
                 </details>
                 <details>
                     <summary >Ir para a linha...</summary>
-                    <p>Abre um campo no qual pode digitar um número de linha no formato <b>LETRANÚMERO</b> (ex.: <b>C5</b>) e, uma vez digitado o número, a página rola até a linha correspondente ao número.</p>
+                    <p>Abre um campo no qual pode digitar um número de linha no formato <b>LETRANÚMERO</b> (ex.: <b>E3</b>) e, uma vez digitado o número, a página rola até a linha correspondente ao número.</p>
                 </details>
                 <details>
                     <summary>Esvaziar ficha</summary>
@@ -565,9 +565,9 @@
                 </details>
                 <details class="artigo__details-motivo-de-red-cells">
                     <summary>Algumas células mudaram de cor de fundo para vermelho</summary>
-                    <p>As células do totalizador têm um tamanho para conter, visivelmente, 9 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">999999999</span>. Quando a célula recebe um número com mais de 9 algarismos, dá um alerta ao usuário ficando vermelha e, eventualmente, mostrando uma mensagem de texto com informação sobre a omissão dos algarismos e o real motivo.</p>
+                    <p>As células do totalizador têm um tamanho para conter, visivelmente, 7 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">9999999</span>. Quando a célula recebe um número com mais de 7 algarismos, dá um alerta ao usuário ficando vermelha e, eventualmente, mostrando uma mensagem de texto com informação sobre a omissão dos algarismos e o real motivo.</p>
 
-                    <p class="artigo__p artigo__p--destaque">Para um país como Moçambique, em que o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que, actualmente, nenhuma Unidade Sanitária tem um número mensal de dados, de algum indicador de qualquer que seja a sua natureza, acima de <span class="number-format">999999999</span>.</p>
+                    <p class="artigo__p artigo__p--destaque">Para um país como Moçambique, em que o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que, actualmente, nenhuma Unidade Sanitária tem um número mensal de dados, de algum indicador de qualquer que seja a sua natureza, acima de <span class="number-format">9999999</span>.</p>
                 </details>
                 <button class="artigo__btn-fechar artigo__btn-fechar--ajuda" title="Fechar">&times;</button>
             </article>

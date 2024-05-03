@@ -58,7 +58,7 @@
 
 .ficha__linha-de-endereco {
     display: grid;
-    grid-template-columns: 95px 186px 218px 258px 61px;
+    grid-template-columns: 95px 186px 218px 258px 66px;
     grid-template-areas: ". provincia distrito us ano";
     margin-bottom: 8px;
     width: 905px;
@@ -92,9 +92,14 @@
 
 .ficha__linha-de-endereco input {
     display: block;
-    width: 100%;
+    width: calc(100% - 5px);
     text-align: center;
 }
+
+.ficha__linha-de-endereco input::-webkit-calendar-picker-indicator {
+    display: none !important;
+}
+
 
 /* Cabecalho da ficha */
 .ficha__body__header {
@@ -111,7 +116,7 @@
         position: sticky;
         top: 0;
         background-color: var(--yt);
-        z-index: 999;
+        z-index: 99;
     }
 }
 
@@ -218,6 +223,11 @@
 .ficha__col-de-inputs {
     display: grid;
     grid-template-rows: 120px 131px 89px 130px repeat(3, calc(330px / 3));
+}
+
+.ficha__num-de-linha.--highlight {
+    background-color: var(--orange);
+    color: var(--cor-de-texto);
 }
 
 .ficha__col-de-indicadores span {
