@@ -69,7 +69,7 @@ const menu = {
         return {  
             dialogBox: document.querySelector(".dialog-box-esvaziar-ficha"),
             abrirDialogBox() { 
-                const gridInputs  = document.querySelectorAll("[data-totalgeral], [readonly], .grid-extra__input");
+                const gridInputs  = document.querySelectorAll("[data-totalgeral], [readonly], .input-periodo-de-reporte");
 
                 let inputFilled = 0;
                 for(const input of gridInputs) {
@@ -93,7 +93,7 @@ const menu = {
             },
 
             confirmar() {
-                const gridInputs  = document.querySelectorAll("[data-totalgeral], [readonly], .grid-extra__input");
+                const gridInputs  = document.querySelectorAll("[data-totalgeral], [readonly], .input-periodo-de-reporte");
                 const dadosAdicionais__checkboxes = document.querySelectorAll("[data-inputadicionalid]");
        
                 for (let i = 0; i < gridInputs.length; i++) {
@@ -116,7 +116,7 @@ const menu = {
 
     imprimirFicha() {
         const comentarios = document.querySelector(".main__campo-de-nota");
-        comentarios.value === "" && comentarios.classList.add("--no-print");
+        comentarios.value === "" && comentarios.parentElement.classList.add("--no-print");
         window.print()
     },
 
@@ -239,9 +239,9 @@ function eventos() {
 
     // PARTILHAR 
     const data = {
-        title: "Totalizador de Resumo Mensal de HIV/SIDA",
-        text: "O Totalizador de Resumo Mensal de HIV/SIDA é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo mensal de HIV/SIDA, por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo mensal de HIV/SIDA actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
-        url: "https://quinamine.github.io/totalizador-de-resumo-mensal-de-hiv-e-sida/index.html"
+        title: "Totalizador de Resumo Mensal de APSS/PP",
+        text: "O Totalizador de Resumo Mensal de APSS/PP é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo trimestral de APSS/PP (Apoio Psicossocial e Prevenção Positiva), por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo trimestral de APSS/PP actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
+        url: "https://quinamine.github.io/totalizador-de-resumo-mensal-de-apss-e-pp/index.html"
     }
 
     const btnPartilhar = document.querySelector(".header__nav__btn--partilhar");

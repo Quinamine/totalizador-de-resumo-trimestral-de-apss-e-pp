@@ -135,18 +135,18 @@
                                 <label for="reporte__mes-inicial" class="--fw-700">Período de Reporte</label>
                                 <div class="box-periodo-de-reporte__col-de-inputs">
 
-                                    <input type="text" id="reporte__mes-inicial" class="input-nao-celular --fw-700 --border-b" />
+                                    <input type="text" id="reporte__mes-inicial" class="input-periodo-de-reporte --fw-700 --border-b" />
 
                                     <span>/</span>
 
-                                    <input type="number" class="input-nao-celular --fw-700 --border-b" />
+                                    <input type="number" class="input-periodo-de-reporte --fw-700 --border-b" />
 
                                     <span>&hyphen;</span>
 
-                                    <input type="text" class="input-nao-celular --fw-700 --border-b" />
+                                    <input type="text" class="input-periodo-de-reporte --fw-700 --border-b" />
 
                                     <span>/</span>
-                                    <input type="number" class="input-nao-celular --fw-700 --border-b" />
+                                    <input type="number" class="input-periodo-de-reporte --fw-700 --border-b" />
                                 </div>
                             </div>
                         </div>
@@ -362,7 +362,7 @@
                 <textarea class="main__campo-de-nota input-nao-celular" id="input-comentarios" placeholder="Comentários sobre o resumo (S.O.S)..." rows=3></textarea>
             </div>
 
-            <div class="reference-container">
+            <div class="reference-container --no-print">
                 <div class="layout-row reference-row">
                     <span class="reference-row__label">Indicador:</span> 
                     <output class="reference-row__output reference-row__output--indicador --display-flex-y-center"></output>
@@ -518,12 +518,12 @@
                     <summary>Esvaziar ficha</summary>
                     <p>Comando para limpar as células da ficha após a confirmação da acção na caixa de diálogo que abre.</p>
                     
-                    <p>Permite também esvaziar campos adicionais (Província, Distrito, US, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando, desse modo, que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
+                    <p>Permite também esvaziar campos adicionais (Província, Distrito, Unidade Sanitária, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando, desse modo, que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
 
                     <figure class="details__moldura details__moldura--esvaziar-ficha">
-                        <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo de esvaziamento da ficha" class="artigo__img"/>
+                        <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo para esvaziamento da ficha" class="artigo__img"/>
 
-                        <figcaption class="details__moldura__legenda"><b>Legenda:</b> Caixa de diálogo de esvaziamento da ficha. Neste caso, os campos de <b>Província, Distrito e Unidade Sanitária</b> seriam preservados (por ter suas checkboxes desmarcadas). Todos os outros cujas "checkboxes" estão marcadas, teriam seus campos esvaziados.</figcaption>
+                        <figcaption class="details__moldura__legenda"><b>Legenda:</b> Caixa de diálogo para esvaziamento da ficha. Neste caso, os campos de <b>Província, Distrito e Unidade Sanitária</b> seriam preservados (por ter suas checkboxes desmarcadas). Todos os outros cujas "checkboxes" estão marcadas, teriam seus campos esvaziados.</figcaption>
                     </figure>
 
                 </details>
@@ -609,7 +609,7 @@
                 </p>
                 <a href=#root class=footer__link-back-to-top>Voltar ao topo</a>
             </div>
-            <p class="footer__p footer__p--available-since">Disponível desde Março de 2024.</p>
+            <p class="footer__p footer__p--available-since">Disponível desde 04/03/2024.</p>
         </footer>
         <div class="desfoque"></div>
     </body>

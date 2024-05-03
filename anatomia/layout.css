@@ -55,7 +55,7 @@
 @media print {
     .body {
         -webkit-print-color-adjust: exact;
-        visibility: hidden;
+        /*visibility: hidden;*/
     }
 }
 
@@ -340,10 +340,6 @@ input[data-totalgeral]:focus,
         font-weight: 700;
         border: none;
         padding-left: 0;
-    }
-
-    .main__campo-de-nota.--no-print {
-        display: none
     }
  }
 
