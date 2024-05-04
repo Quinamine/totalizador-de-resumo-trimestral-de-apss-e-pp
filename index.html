@@ -22,14 +22,14 @@
     <script src="fisiologia/db.js"></script>
     <script src="fisiologia/referencia.js"></script>
     
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-6DVBGJL33D" async></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFCVV69MG2"></script>
     <script>
-        function gtag() {
-            dataLayer.push(arguments)
-        }
-        window.dataLayer = window.dataLayer || [],
-        gtag("js", new Date),
-        gtag("config", "G-6DVBGJL33D")
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KFCVV69MG2');
     </script>
     <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do Totalizador. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
 
@@ -251,7 +251,7 @@
                                 <span>N<sup>o</sup> de pacientes faltosos e abandonos<br/> que retornaram a unidade sanitária<br/> <em>durante o trimestre</em> , (dos contactos<br/> e/ou encontrados no mesmo período)</span>
                             </div>
                         </div>
-                        <div class="ficha__col-de-inputs ficha__col-de-inputs-0-14-anos-m --border-b-thick --border-l-thick">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs-0-14-anos-m --border-b-thick --border-l-thick" data-faixaetaria="0-14 anos" data-sexo="Masc.">
                             <input type="number" name="l1-c1" id="l1-c1" min="0" data-totalgrupo="l1-c1c2" data-totalgrupooutput="l1-c3" data-totalgeral="l1-c1c2" data-totalgeraloutput="l1-c7"/>
     
                             <input type="number" name="l2-c1" id="l2-c1" min="0" data-totalgrupo="l2-c1c2" data-totalgrupooutput="l2-c3" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick" />
@@ -267,7 +267,7 @@
                             <input type="number" name="l7-c1" id="l7-c1" min="0" data-totalgrupo="l7-c1c2" data-totalgrupooutput="l7-c3" data-totalgeral="l7-c1c2c4c5" data-totalgeraloutput="l7-c7" class="--border-t-thick" />
                             
                         </div>
-                        <div class="ficha__col-de-inputs ficha__col-de-inputs-0-14-anos-f --border-b-thick">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs-0-14-anos-f --border-b-thick" data-faixaetaria="0-14 anos" data-sexo="Fem.">
                             <input type="number" name="l1-c1" id="l1-c1" min="0" data-totalgrupo="l1-c1c2" data-totalgrupooutput="l1-c3" data-totalgeral="l1-c1c2" data-totalgeraloutput="l1-c7" class="--border-l-thick" />
     
                             <input type="number" name="l2-c1" id="l2-c1" min="0" data-totalgrupo="l2-c1c2" data-totalgrupooutput="l2-c3" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick --border-l-thick" />
@@ -291,7 +291,7 @@
                             <input type="number" readonly class="l6-c3 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l7-c3 --border-t-thick --border-l-thick"/>
                         </div>
-                        <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-anos-m --border-b-thick --border-l-thick">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-anos-m --border-b-thick --border-l-thick" data-faixaetaria="15/+ anos" data-sexo="Masc.">
                             <div class="celula-n-a"></div>
     
                             <input type="number" name="l2-c4" id="l2-c4" min="0" data-totalgrupo="l2-c4c5" data-totalgrupooutput="l2-c6" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick" />
@@ -306,7 +306,7 @@
     
                             <input type="number" name="l7-c4" id="l7-c4" min="0" data-totalgrupo="l7-c4c5" data-totalgrupooutput="l7-c6" data-totalgeral="l7-c1c2c4c5" data-totalgeraloutput="l7-c7" class="--border-t-thick" />
                         </div>
-                        <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-f --border-b-thick">
+                        <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-f --border-b-thick" data-faixaetaria="15/+ anos" data-sexo="Fem.">
                             <div class="celula-n-a" data-faixaetaria="&ge; 15 anos"></div>
     
                             <input type="number" name="l2-c4" id="l2-c4" min="0" data-totalgrupo="l2-c4c5" data-totalgrupooutput="l2-c6" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick --border-l-thick" />

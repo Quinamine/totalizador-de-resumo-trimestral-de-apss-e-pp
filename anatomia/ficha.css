@@ -234,6 +234,10 @@
     padding: 0 4px;
 }
 
+.ficha__col-de-indicadores sup {
+    font-size: 11px;
+}
+
 .ficha__col-de-indicadores em {
     font-style: italic;
     text-decoration: underline;
