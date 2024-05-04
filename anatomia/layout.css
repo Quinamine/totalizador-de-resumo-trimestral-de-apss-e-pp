@@ -683,6 +683,14 @@ details summary {
     border-top: thin solid var(--gray--d);
 }
 
+@media screen and (min-width: 1024px) {
+    details summary {
+        position: sticky;
+        top: -20px;
+        background-color: var(--yt);
+    }
+}
+
 details[open] summary {
     color: var(--cor-de-texto);
 }
