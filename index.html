@@ -33,42 +33,42 @@
     </script>
     <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do Totalizador. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
 
-    <body class="body" ontouchstart="">
+    <body ontouchstart="">
         <header class="header --no-print">
-            <div class="layout-row header__row --display-flex-y-center">
+            <div class="layout-row layout-row--header">
                 <a href=index.html class=header__logo>
                     Totalizador de Resumo <span class="logo__span--hide-on-screen-s">Trimestral</span>
                     de APSS<span class="logo__sigla-pp">/PP</span>
                 </a>
-                <div role="navigation" class="header__nav --display-flex-y-center">
-                    <ul class="header__nav__ul --display-flex-y-center">
-                        <li class="header__nav__li header__nav__li--realcartotais">
-                            <input type=checkbox id="checkbox-realcar-totais" class="header__checkbox header__child--cursor">
-                            <label for="checkbox-realcar-totais" class="header__nav__label --display-flex-y-center header__child--cursor">
+                <div role="navigation" class="header__menu --display-flex-y-center">
+                    <ul class="header__menu__ul --display-flex-y-center">
+                        <li class="header__menu__li header__menu__li--realcar-totais header__menu__li--first-child">
+                            <input type=checkbox id="checkbox-realcar-totais" class="header__menu__checkbox header__child--cursor">
+                            <label for="checkbox-realcar-totais" class="header__menu__label --display-flex-y-center header__child--cursor">
                                 Realçar&nbsp;totais
                             </label>
-                        <li class="header__nav__li">
-                            <button class="header__nav__btn header__nav__btn--ir-para">Ir para a linha...</button>
-                        <li class="header__nav__li">
-                            <button class="header__nav__btn header__nav__btn--esvaziar-ficha">Esvaziar ficha</button>
-                        <li class="header__nav__li">
-                            <button class="header__nav__btn header__nav__btn--imprimir">
-                                <span class="--hide-on-mobile header__child--cursor">Imprimir</span>
-                                <span class="--hide-on-desktop header__child--cursor">Salvar&nbsp;como&nbsp;PDF</span>
+                        <li class="header__menu__li">
+                            <button class="header__menu__btn header__menu__btn--ir-para">Ir para a linha...</button>
+                        <li class="header__menu__li">
+                            <button class="header__menu__btn header__menu__btn--esvaziar-ficha">Esvaziar ficha</button>
+                        <li class="header__menu__li">
+                            <button class="header__menu__btn header__menu__btn--imprimir">
+                                <span class="header__menu__item--desktop header__child--cursor">Imprimir</span>
+                                <span class="header__menu__item--mobile header__child--cursor">Salvar&nbsp;como&nbsp;PDF</span>
                             </button>
-                        <li class="header__nav__li header__li--hide-on-mobile">
-                            <button class="header__nav__btn header__nav__btn--sobre">Sobre</button>
-                        <li class="header__nav__li">
-                            <button class="header__nav__btn header__nav__btn--ajuda">
+                        <li class="header__menu__li header__menu__item--desktop">
+                            <button class="header__menu__btn header__menu__btn--sobre">Sobre</button>
+                        <li class="header__menu__li">
+                            <button class="header__menu__btn header__menu__btn--ajuda">
                                 Ajuda
                             </button>
-                        <li class="header__nav__li header__li--hide-on-desktop">
-                            <button class="header__nav__btn header__nav__btn--partilhar">Partilhar...</button>
+                        <li class="header__menu__li header__menu__item--mobile">
+                            <button class="header__menu__btn header__menu__btn--partilhar">Partilhar...</button>
                     </ul>
                 </div>
             </div>
         </header>
-        <main class="main">
+        <main>
             <div class="ficha">
                 <header>
                     <div class="ficha__linha-de-emblema-e-titulo">
@@ -292,7 +292,7 @@
                             <input type="number" readonly class="l7-c3 --border-t-thick --border-l-thick"/>
                         </div>
                         <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-anos-m --border-b-thick --border-l-thick" data-faixaetaria="15/+ anos" data-sexo="Masc.">
-                            <div class="celula-n-a"></div>
+                            <div class="celula-n-a" data-faixaetaria="&ge; 15 anos"></div>
     
                             <input type="number" name="l2-c4" id="l2-c4" min="0" data-totalgrupo="l2-c4c5" data-totalgrupooutput="l2-c6" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick" />
     
@@ -419,28 +419,28 @@
                 <h4 class="dialog-box-esvaziar-ficha__titulo --fw-700">Dados adicionais</h4>
                 <ul class=dialog-box-esvaziar-ficha__ul-dados-adicionais>
                     <li>
-                        <input type=checkbox checked id="checkbox-prov" data-inputadicionalid=input-provincia>
+                        <input type=checkbox checked id="checkbox-prov" data-for=input-provincia>
                         <label for=checkbox-prov>Província</label>
                     <li>
-                        <input type=checkbox checked id="checkbox-distrito" data-inputadicionalid=input-distrito>
+                        <input type=checkbox checked id="checkbox-distrito" data-for=input-distrito>
                         <label for=checkbox-distrito>Distrito</label>
                     <li>
-                        <input type=checkbox checked id="checkbox-us" data-inputadicionalid=input-us>
+                        <input type=checkbox checked id="checkbox-us" data-for=input-us>
                         <label for=checkbox-us>Unidade Sanitária</label>
                     <li>
-                        <input type=checkbox id=checkbox-ano checked data-inputadicionalid=input-ano>
+                        <input type=checkbox id=checkbox-ano checked data-for=input-ano>
                         <label for=checkbox-ano>Ano</label>
                     <li>
-                        <input type=checkbox id=checkbox-nome checked data-inputadicionalid=input-nome>
+                        <input type=checkbox id=checkbox-nome checked data-for=input-nome>
                         <label for=checkbox-nome>Nome</label>
                     <li>
-                        <input type=checkbox id=checkbox-assinatura checked data-inputadicionalid=input-assinatura>
+                        <input type=checkbox id=checkbox-assinatura checked data-for=input-assinatura>
                         <label for=checkbox-assinatura>Assinatura</label>
                     <li>
-                        <input type=checkbox id=checkbox-data checked data-inputadicionalid=input-data>
+                        <input type=checkbox id=checkbox-data checked data-for=input-data>
                         <label for=checkbox-data>Data de Elaboração</label>
                     <li>
-                        <input type=checkbox id=checkbox-comentarios checked data-inputadicionalid=input-comentarios>
+                        <input type=checkbox id=checkbox-comentarios checked data-for=input-comentarios>
                         <label for=checkbox-comentarios>Comentários</label>
                 </ul>
                 <div class=dialog-box-esvaziar-ficha__btns-container>
@@ -451,7 +451,7 @@
         </section>
 
         <section class="sessao-de-artigos --no-print">
-            <article class="artigo artigo--sobre" id="sobre">
+            <article id="sobre" class="artigo artigo--sobre layout-row layout-row--artigo-sobre">
                 <h2 class="artigo__titulo artigo__titulo--nivel-1">Visão geral sobre o totalizador</h2>
                 <figure>
                     <img alt="Totalizador de Resumo Trimestral de APSS/PP" src=imagens/totalizador-de-resumo-trimestral-de-apss-e-pp.png class="artigo__img artigo__img--sobre-o-tot">
@@ -463,17 +463,16 @@
 
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Objectivos</h3>
 
-                <ul class="artigo__lista artigo__ul">
-                    <li>Calcular correcta e automaticamente os totais;</li>
-                    <li>Preencher automaticamente os totais nas células correspondentes;</li>
-                    <li>Minimizar possíveis erros de totalização, sobretudo por confusão (por exemplo, somar inadvertidamente células não correspondentes ou registar o total da linha A, na linha B);</li>
+                <ul class="artigo__lista artigo__lista--ul">
+                    <li>Auxiliar os Profissionais de Saúde na totalização do resumo trimestral de APSS/PP com exatidão e prontidão;</li>
+                    <li>Minimizar possíveis erros de totalização (por exemplo, somar inconscientemente células não correspondentes ou registar o total da linha A, na linha B);</li>
                     <li >Expandir o acesso à ficha de resumo trimestral de APSS/PP.
                 </ul>
 
                 <h3 class="artigo__titulo artigo__titulo--nivel-2 ">O que eu preciso dispor para, e como utilizar o totalizador?</h3>
 
-                <ul class="artigo__lista artigo__ul">
-                    <li>Um telemóvel ou computador com acesso à internet;</li>
+                <ul class="artigo__lista artigo__lista--ul">
+                    <li>Um celular ou computador com acesso à internet;</li>
                     <li>Ter colhido os dados de todos os indicadores da ficha nas fontes primárias (livro(s) de registo diário das actividades de apoio psicossocial e prevenção positiva) da sua Unidade Sanitária;</li>
                     <li>E por fim, preencher os dados nas células correspondentes quanto ao indicador e as outras variáveis, e consequentemente os respectivos totais são, em tempo real, correcta e automaticamente calculados.</li>
                 </ul>
@@ -486,7 +485,7 @@
 
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Vantagens do totalizador</h3>
 
-                <ul class="artigo__lista artigo__ul">
+                <ul class="artigo__lista artigo__lista--ul">
                     <li>Calcula automaticamente os totais;</li>
                     <li>Preenche automaticamente as células correspondentes aos totais;</li>
                     <li>Fornece resultados (totais) exactos;</li>
@@ -497,18 +496,18 @@
 
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Limitações do totalizador</h3>
                     
-                <ul class="artigo__lista artigo__ul">
-                    <li>Não alerta sobre discrepância de dados, portanto, a análise da concordância dos dados é inteiramente dependente do usuário;</li>
+                <ul class="artigo__lista artigo__lista--ul">
+                    <li>Não alerta sobre discrepância de dados, portanto, a análise da concordância dos dados é inteiramente dependente do usuário.</li>
                 </ul>
                 <button class="artigo__btn-fechar artigo__btn-fechar--sobre" title="Fechar">&times;</button>
             </article>
 
-            <article class="artigo artigo--ajuda">
-                <h2 class="artigo__titulo artigo__titulo--nivel-1 artigo__titulo--border-b-thick">Ajuda e Procedimentos</h2>
+            <article class="artigo artigo--ajuda layout-row layout-row--artigo-ajuda">
+                <h2 class="artigo__titulo artigo__titulo--nivel-1 artigo__titulo--ajuda-e-procedimentos">Ajuda e Procedimentos</h2>
 
                 <details>
                     <summary>Realçar totais</summary>
-                    <p>Adiciona um fundo cinzento a todas as células dos totais. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distingui-las facilmente de outras células. Muito útil em dispositivos móveis.</p>
+                    <p>Adiciona um fundo cinzento a todas as células dos totais. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distingui-las facilmente de outras células. Muito útil em celulares.</p>
                 </details>
                 <details>
                     <summary >Ir para a linha...</summary>
@@ -518,7 +517,7 @@
                     <summary>Esvaziar ficha</summary>
                     <p>Comando para limpar as células da ficha após a confirmação da acção na caixa de diálogo que abre.</p>
                     
-                    <p>Permite também esvaziar campos adicionais (Província, Distrito, Unidade Sanitária, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando, desse modo, que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
+                    <p>Permite também esvaziar campos adicionais (Província, Distrito, Unidade Sanitária, etc.) de forma seletiva. Para tal, na caixa de diálogo de confirmação, as "checkboxes" dos dados adicionais são, por padrão, marcadas com o sinal de "✔", indicando desse modo que o conteúdo contido nos respectivos campos será eliminado, mas caso queira manter a informação de um campo específico, basta desmarcá-lo clicando directamente sobre a ckeckbox ou sobre a sua descrição.</p> 
 
                     <figure class="details__moldura details__moldura--esvaziar-ficha">
                         <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo para esvaziamento da ficha" class="artigo__img"/>
@@ -530,7 +529,7 @@
                 <details class="details-salvar-ficha-como-pdf">
                     <summary>Salvar ficha como PDF</summary>
                     <h3 class="artigo__titulo artigo__titulo--nivel-2 artigo__titulo--cor-discreta">No computador:</h3>
-                    <ol class="artigo__lista artigo__ol">
+                    <ol class="artigo__lista artigo__lista--ol">
                         <li>
                             Clique na opção <mark>Imprimir</mark> no menu do totalizador.
                         <li>
@@ -541,13 +540,12 @@
                     </ol>
 
                     <h3 class="artigo__titulo artigo__titulo--nivel-2 artigo__titulo--cor-discreta">No celular / tablet:</h3>
-                    <ol class="artigo__lista artigo__ol">
+                    <ol class="artigo__lista artigo__lista--ol">
                         <li>
                             Toque na opção <mark>Salvar como PDF</mark> no cabeçalho do totalizador.
                         </li>
                         <li>
-                            Na janela seguinte, se não vir a opção <mark>Guardar como PDF</mark>, toque na seta <svg style="width: 24px; height: 18px;  border-radius: 4px; background-color: #dce4f4; position: relative; bottom: -5px;">
-                                <polygon points="6,6 18,6 12,12" fill="#888888"></svg> ao lado de <mark><b>Selec. impressora</b></mark> para expandir a opção.
+                            Na janela seguinte, se não vir a opção <mark>Guardar como PDF</mark>, toque em<mark><b>Selec. impressora</b></mark>.
                         </li>
 
                         <figure class="details__moldura">
@@ -565,9 +563,9 @@
                 </details>
                 <details class="artigo__details-motivo-de-red-cells">
                     <summary>Algumas células mudaram de cor de fundo para vermelho</summary>
-                    <p>As células do totalizador têm um tamanho para conter, visivelmente, 7 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">9999999</span>. Quando a célula recebe um número com mais de 7 algarismos, dá um alerta ao usuário ficando vermelha e, eventualmente, mostrando uma mensagem de texto com informação sobre a omissão dos algarismos e o real motivo.</p>
+                    <p>As células do totalizador têm um tamanho para conter visivelmente 7 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">9999999</span>. Quando a célula recebe um número com mais de 7 algarismos, dá um alerta ao usuário ficando vermelha e eventualmente mostrando uma mensagem de texto com informação sobre a omissão dos algarismos e o real motivo.</p>
 
-                    <p class="artigo__p artigo__p--destaque">Para um país como Moçambique, em que o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que, actualmente, nenhuma Unidade Sanitária tem um número mensal de dados de algum indicador, de qualquer que seja a sua natureza, acima de <span class="number-format">9999999</span>.</p>
+                    <p class="artigo__p artigo__p--destaque">Para um país como Moçambique, em que o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que nenhuma Unidade Sanitária actualmente tem um número mensal de dados de algum indicador, de qualquer que seja a sua natureza, acima de <span class="number-format">9999999</span>.</p>
                 </details>
                 <button class="artigo__btn-fechar artigo__btn-fechar--ajuda" title="Fechar">&times;</button>
             </article>

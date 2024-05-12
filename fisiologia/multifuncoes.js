@@ -1,3 +1,5 @@
+"use strict"
+
 var keyPrefix = "trmapss";
 
 function desfoqueDoFundo(accao) {
@@ -42,7 +44,7 @@ function destacarCelulasSaturadas() {
     
     if(celulasSaturadas > 0) {
         setTimeout(() => {
-            motivoDeSaturacao = document.querySelector(".artigo__details-motivo-de-red-cells");
+            const motivoDeSaturacao =  document.querySelector(".artigo__details-motivo-de-red-cells");
 
             menu.abrirArtigo("ajuda");
             motivoDeSaturacao.setAttribute("open", "");
@@ -72,9 +74,9 @@ const aqd = {
 
 function actualizarAno() {
     const tempo = new Date();
-    anoActual = tempo.getFullYear();
+    let anoActual = tempo.getFullYear();
 
-    if(anoActual < 2023) anoActual = 2023;
+    if(anoActual < 2024) anoActual = 2024;
 
     const currentYearOutput = document.querySelector(".footer__current-year");
     currentYearOutput.textContent = anoActual;

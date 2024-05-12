@@ -237,7 +237,7 @@ const moz = {
             codigos: ["01031011", "01031007", "01031009", "01031012", "01031014", "01031013"]
         },
         mogovolas: {
-            us: ["CS Calipo", "CS iuluti", "CS Mecutamala", "CS Muatua", "CS Murrirrimue", "CS Nametil", "CS Nanhupo Rio"],          
+            us: ["CS Calipo", "CS Iuluti", "CS Mecutamala", "CS Muatua", "CS Murrirrimue", "CS Nametil", "CS Nanhupo Rio"],          
             codigos: ["01031107", "01031108", "01031111", "01031109", "01031112", "01031106", "01031110"] 
         },
         moma: {
@@ -289,7 +289,7 @@ const moz = {
             codigos: ["01032009", "01032022", "01032011", "01032012", "01032008", "01032017", "01032018", "01032006"]   
         }, 
         ribaue: {
-            us: ["PS ESC. BAS. AGRARIA", "CS Chica", "CS Cunle", "CS Lapala Estação", "CS Lapala Monapo", "CS Namiconha", "CS Riane", "HR Ribaue", "LPS Mecuasse"],
+            us: ["PS ESC. BAS. AGRÁRIA", "CS Chica", "CS Cunle", "CS Lapala Estação", "CS Lapala Monapo", "CS Namiconha", "CS Riane", "HR Ribaue", "LPS Mecuasse"],
 
             codigos: ["01032112", "01032107", "01032113", "01032108", "01032106", "01032110", "01032111", "01032101", "01032109"]
         }
