@@ -1,6 +1,6 @@
 "use strict"
 
-var keyPrefix = "trmapss";
+var keyPrefix = "trtapss";
 
 function desfoqueDoFundo(accao) {
     const desfoque = document.querySelector(".desfoque");
@@ -107,8 +107,8 @@ window.addEventListener("load", () => {
         alertarSobre(readonlyInputsMsg);
     }));
 
-    const gridInputs = document.querySelectorAll("[data-totalgeral]");
-    gridInputs.forEach (gi => gi.addEventListener("input", destacarCelulasSaturadas));
+    const inputsCelulares = document.querySelectorAll("[data-totalgeral]");
+    inputsCelulares.forEach (inputCelular => inputCelular.addEventListener("input", destacarCelulasSaturadas));
     destacarCelulasSaturadas();
 
     // Indicador nao aplicavel para APEs

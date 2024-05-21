@@ -70,6 +70,15 @@ input[type=number] {
     padding: 1px;
 }
 
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+
 button {
     border: none;
     outline: 0;

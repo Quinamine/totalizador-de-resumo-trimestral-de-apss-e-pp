@@ -33,15 +33,15 @@ const referencia = {
 }
 
 function events() {
-    const gridInputs = document.querySelectorAll("[data-totalgeral]");
-    gridInputs.forEach( gi => {
-        gi.addEventListener("focus", () => {
-            referencia.retornarIndicador(gi);
-            referencia.retornarFaixaEtariaEsexo(gi);
+    const inputsCelulares = document.querySelectorAll("[data-totalgeral]");
+    inputsCelulares.forEach( inputCelular => {
+        inputCelular.addEventListener("focus", () => {
+            referencia.retornarIndicador(inputCelular);
+            referencia.retornarFaixaEtariaEsexo(inputCelular);
         });
     });
 
-    gridInputs.forEach( gi => gi.addEventListener("focusout", referencia.retornarVazio));
+    inputsCelulares.forEach( inputCelular => inputCelular.addEventListener("focusout", referencia.retornarVazio));
 }
 
 window.onload = events;

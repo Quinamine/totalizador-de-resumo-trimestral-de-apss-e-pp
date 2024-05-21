@@ -5,7 +5,7 @@ const menu = {
         for (const t of totais) {
             if(condicao) {
                 t.classList.add("--realcar-totais");
-                localStorage.setItem(`${keyPrefix}-realcarTotais`, "true");
+                localStorage.setItem(`${keyPrefix}-realcarTotais`, true);
             } else {
                 t.classList.remove("--realcar-totais");
                 localStorage.removeItem(`${keyPrefix}-realcarTotais`);
@@ -69,10 +69,10 @@ const menu = {
         return {  
             dialogBox: document.querySelector(".dialog-box-esvaziar-ficha"),
             abrirDialogBox() { 
-                const gridInputs  = document.querySelectorAll("[data-totalgeral], [readonly], .input-periodo-de-reporte");
+                const inputsDaFicha = document.querySelectorAll(".ficha input");
 
                 let inputFilled = 0;
-                for(const input of gridInputs) {
+                for(const input of inputsDaFicha) {
                     input.value.length > 0 && inputFilled++;
                 }
 
@@ -93,20 +93,20 @@ const menu = {
             },
 
             confirmar() {
-                const gridInputs  = document.querySelectorAll("[data-totalgeral], [readonly], .input-periodo-de-reporte");
-                const dadosAdicionais__checkboxes = document.querySelectorAll("[data-for]");
+                const inputsCelulares  = document.querySelectorAll("[data-totalgeral], [readonly], .input-periodo-de-reporte");
+                const checkboxesParaInputsNaoCelulares = document.querySelectorAll("[data-for]");
        
-                for (let i = 0; i < gridInputs.length; i++) {
-                    gridInputs[i].value = "";
+                for (let i = 0; i < inputsCelulares.length; i++) {
+                    inputsCelulares[i].value = "";
                     localStorage.removeItem(`${keyPrefix}-input${i}`);
                 }
 
-                for (const cb of dadosAdicionais__checkboxes) {                    
+                for (const cb of checkboxesParaInputsNaoCelulares) {                    
                     if(cb.checked) {
-                        let id = cb.dataset.for
-                        let inputAdicional = document.getElementById(`${id}`);
-                        inputAdicional.value = "";
-                        localStorage.removeItem(`${keyPrefix}-${inputAdicional.id}`);
+                        let idDeInputNaoCelular = cb.dataset.for
+                        let inputNaoCelular = document.getElementById(`${idDeInputNaoCelular}`);
+                        inputNaoCelular.value = "";
+                        localStorage.removeItem(`${keyPrefix}-${inputNaoCelular.id}`);
                     }
                 }
                 menu.esvaziarFicha().fecharDialogBox();
@@ -116,7 +116,7 @@ const menu = {
 
     imprimirFicha() {
         const comentarios = document.querySelector(".main__campo-de-nota");
-        comentarios.value === "" ? comentarios.parentElement.classList.add("--no-print") : comentarios.classList.remove("--no-print");
+        comentarios.value === "" ? comentarios.parentElement.classList.add("--no-print") : comentarios.parentElement.classList.remove("--no-print");
         window.print()
     },
 
@@ -169,10 +169,10 @@ function eventos() {
     const btnAbrirIrPara = document.querySelector(".header__menu__btn--ir-para");
     btnAbrirIrPara.addEventListener("click", menu.irParaLinha().abrirDialogBox);
 
-    const btnFecharIrPara = document.querySelector(".dialog-box-ir-para__btn-fechar");
+    const btnFecharIrPara = document.querySelector(".dialog-box-ir-para__btn--fechar");
     btnFecharIrPara.addEventListener("click", menu.irParaLinha().fecharDialogBox);
 
-    const irPara__btnIr = document.querySelector(".dialog-box-ir-para__btn-ir");
+    const irPara__btnIr = document.querySelector(".dialog-box-ir-para__btn--ir");
     irPara__btnIr.addEventListener("click", () => { 
         const inputNumLinha = document.querySelector(".dialog-box-ir-para__input-linha");
         if(inputNumLinha.value === "") {
