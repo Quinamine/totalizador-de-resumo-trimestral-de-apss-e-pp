@@ -23,6 +23,7 @@
     --blue--light: #2573b5;
     --purple: rgb(116, 116, 235);
     --orange: #faa032;
+    --greenyellow:greenyellow;
     --yellow: yellow;
     --brown: brown;
     --reference-bgc: var(--blue--light);
@@ -233,6 +234,7 @@ main {
 input[data-totalgeral]:focus,
 .input-nao-celular:focus {
     border-bottom: 2px solid var(--blue);
+    background-color: var(--greenyellow);
 }
 /* Campo de Nota */
 .main__container-de-campo-de-nota {
@@ -388,6 +390,10 @@ input[data-totalgeral]:focus,
         grid-column-gap: 3px;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .reference-row__output--indicador {
+        padding-left: 6px;
     }
 
     .reference-row__output {

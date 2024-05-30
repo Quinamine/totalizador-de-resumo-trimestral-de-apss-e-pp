@@ -297,12 +297,12 @@
    text-align: center;
 }
 
-.ficha__rodape__nota-de-preenchimento {
+.ficha__nota-normas-de-preenchimento {
     display: none;
 }
 
 @media print {
-    .ficha__rodape__nota-de-preenchimento {
+    .ficha__nota-normas-de-preenchimento {
         display: block;
         margin: 30px 0 15px;
     }
