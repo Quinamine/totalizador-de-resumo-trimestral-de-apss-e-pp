@@ -99,7 +99,7 @@ const moz = {
     niassa: {
         distritos: ["Chimbunila", "Cuamba", "Lago", "Lichinga", "Majune", "Mandimba", "Marrupa", "Maúa", "Mavago", "Mecanhelas", "Mecula", "Metarica", "Muembe", "Ngaúma", "Nipepe", "Sanga"],
         chimbunila: {
-            us: ["CS Chala", "CS Chimbonila", "CS Chinenge", "CS Cholue", "CS Colongo", "CS Lione", "CS Lumbe", "CS Machemba", "CS Machumane", "CS Mapaco", "CS Mussa", "CS Namuanica", "CS Uti"],
+            us: ["CS Chala", "CS Chimbunila", "CS Chinenge", "CS Cholue", "CS Colongo", "CS Lione", "CS Lumbe", "CS Machemba", "CS Machumane", "CS Mapaco", "CS Mussa", "CS Namuanica", "CS Uti"],
 
             codigos: ["01010406", "01010407", "01010401", "01010408", "01010416", "01010409", "01010402", "01010423", "01010417", "01010418", "01010414", "01010415", "01010403"]
         },

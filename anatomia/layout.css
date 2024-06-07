@@ -6,7 +6,7 @@
     --cor-de-risco: #dd0000;
     --cor-de-realce: #dce4f4;
     --cor-do-rodape: #f0f0f0;
-    --cor-de-risco-alfa-8: rgba(238, 0, 0, .8);
+    --fullred: #ff0000;
     --fullblack: #000000;
     --black--alpha-5: rgba(0, 0, 0, .5);
     --black--alpha-8: rgba(0, 0, 0, .8);
@@ -877,11 +877,11 @@ details mark {
     margin-bottom: 10px;
 }
 
-.dialog-box-esvaziar-ficha p {
+.dialog-box-esvaziar-ficha__p--first {
     margin-bottom: 10px;
 }
 
-.dialog-box-esvaziar-ficha__last-p {
+.dialog-box-esvaziar-ficha__p--last {
     margin-top: 10px;
 }
 
@@ -951,7 +951,7 @@ details mark {
 }
 
 .dialog-box-esvaziar-ficha__btn--confirmar:hover {
-    background-color: var(--cor-de-risco-alfa-8)
+    background-color: var(--fullred)
 }
 
 .desfoque.on {
