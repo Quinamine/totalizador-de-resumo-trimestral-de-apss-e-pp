@@ -545,14 +545,13 @@ input[data-totalgeral]:focus,
 }
 
 .artigo__p--destaque {
-    padding: 15px;
+    padding: 15px 15px 15px 48px;
     background-color: var(--cor-de-realce);
     border-left: 3px solid var(--cor-de-link);
     font-weight: 700;
     color: var(--gray--5);
     box-shadow: 0 4px 9px var(--gray--a);
     border-radius: 3px;
-    padding-left: 48px;
     position: relative;
 }
 
@@ -623,6 +622,7 @@ details summary {
         position: sticky;
         top: -20px;
         background-color: var(--yt);
+        z-index: 10;
     }
 }
 
@@ -647,9 +647,9 @@ details mark {
     margin-bottom: 20px;
 }
 
-.details__moldura--esvaziar-ficha {
+.details__moldura--margin-l {
     margin-left: 15px;
-}
+} 
 
 .details__moldura__legenda {
     font-size: 12px;
