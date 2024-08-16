@@ -87,7 +87,7 @@ const moz = {
         pemba: {
             us: ["CS 18 de Outubro", "CS B. Cimento", "CS Cariacó", "CS Chuiba", "CS Eduardo Mondlane", "CS Ingonane", "CS Mahate", "CS Muxara", "CS Natite", "CS Paquite", "HP Pemba"],
 
-            codigos: ["", "01020109", "01020106", "01020151", "01020110", "01020107", "01020111", "01020112", "01020108", "01020113", "01020100"]
+            codigos: ["01020114", "01020109", "01020106", "01020151", "01020110", "01020107", "01020111", "01020112", "01020108", "01020113", "01020100"]
         },  
         quissanga: { 
             us: ["CS Bilibiza", "CS Cagembe", "CS Mahate", "CS Nacoba", "CS Namaluco", "CS Quissanga", "CS Tororo"],
@@ -747,7 +747,7 @@ const moz = {
 
             codigos: ["01100415", "01100410", "01100417", "01100420", "01100414", "01100408", "01100409", "01100402", "01100406", "01100416", "01100411", "01100413", "01100412", "01100419", "01100407", "01100400", "01100418"]
         },
-        marracurene: {
+        marracuene: {
             us: ["CS Habel Jafar", "CS Machubo", "CS Mali", "CS Marracuene", "CS Matalane", "CS Michafutene", "CS Mumemo", "CS Nhongonhane", "CS Ricatla"],
 
             codigos: ["01100515", "01100508", "01100514", "01100506", "01100507", "01100509", "01100513", "01100510", "01100511"]
