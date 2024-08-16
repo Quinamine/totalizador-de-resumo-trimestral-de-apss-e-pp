@@ -240,7 +240,7 @@ function eventos() {
     // PARTILHAR 
     const data = {
         title: "Totalizador de Resumo Trimestral de APSS/PP",
-        text: "O Totalizador de Resumo Trimestral de APSS/PP é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo trimestral de APSS/PP (Apoio Psicossocial e Prevenção Positiva), por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo trimestral de APSS/PP actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
+        text: "Totaliza automaticamente o resumo trimestral de Apoio Psicossocial e Prevenção Positiva com base nos dados inseridos pelo usuário. Foi desenvolvido de acordo com o modelo da respectiva ficha de resumo mensal actualmente vigente no Serviço Nacional de Saúde em Moçambique.",
         url: "https://quinamine.github.io/totalizador-de-resumo-trimestral-de-apss-e-pp/index.html"
     }
 

@@ -9,7 +9,7 @@ O **Totalizador de Resumo Trimestral de APSS/PP** é um serviço online gratuito
 
 * Auxiliar os Profissionais de Saúde na totalização do resumo trimestral de APSS/PP com exatidão e prontidão;
 
-* Minimizar possíveis erros de totalização (por exemplo, somar inconscientemente células não correspondentes ou registar o total da linha A, na linha B);
+* Minimizar possíveis erros de totalização (por exemplo, somar involuntariamente células não correspondentes ou registar o total da linha A, na linha B);
 
 * Expandir o acesso à ficha de resumo trimestral de APSS/PP.
 
@@ -25,12 +25,12 @@ O **Totalizador de Resumo Trimestral de APSS/PP** é um serviço online gratuito
 
 >[!NOTE]
 >
-> A utilização do totalizador é, de facto, uma garantia de um resumo correctamente totalizado, porém, isso simplesmente não define a qualidade do resumo. Você é o único responsável pela veracidade, lógica e concordância dos dados preenchidos e, portanto, pela qualidade do resumo. O totalizador só se limita a calcular os totais baseando-se exactamente nos dados que você fornece.
+> O totalizador garante um resumo mensal correctamente totalizado, contudo, a qualidade de um resumo mensal não se garante com apenas uma correcta totalização. Factores dependententes do usuário (Profissional de Saúde) como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do mês ou período em alusão, entre outros, influenciam sobremaneira na qualidade de um resumo mensal.
 
 
 ## Qual é o destino dos dados que eu insiro?
 
-São guardados localmente (no navegador que estiver a usar), por meio de um recurso chamado [Web Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API) e você tem total controle sobre esses, podendo mantê-los ou apagá-los por meio da opção "Esvaziar ficha" no menu do totalizador ou esvaziando o histórico (inclusíve os cookies) do seu navegador.
+São guardados no seu celular ou computador, por meio de um recurso chamado [Web Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API) e você tem total controle sobre os dados, podendo mantê-los ou apagá-los por meio da opção "Esvaziar ficha" no menu do totalizador ou excluindo os dados de navegação (histórico) do navegador.
 
 
 ## Vantagens do totalizador

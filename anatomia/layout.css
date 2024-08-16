@@ -551,20 +551,20 @@ input[data-totalgeral]:focus,
     font-weight: 700;
     color: var(--gray--5);
     box-shadow: 0 4px 9px var(--gray--a);
-    border-radius: 3px;
+    border-radius: 5px;
     position: relative;
 }
 
 .artigo__p--destaque::before {
     content: "i";
-    font-size: 16px;
-    padding: 0 10px;
+    font-size: 11px;
+    padding: 0 7px;
     border-radius: 50%;
     border: 1px solid var(--purple);
     background-color: var(--blue--light);
     color: var(--yt);
     position: absolute;
-    left: 12px;
+    left: 15px;
 }
 
 .artigo__lista {
