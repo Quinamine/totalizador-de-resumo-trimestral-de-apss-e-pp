@@ -35,16 +35,16 @@ function destacarCelulasComConteudoOmisso() {
 
     let celulasSaturadas = 0;
     for(const c of celulas) {
-        c.classList.remove("celula-saturada");
+        c.classList.remove("input--bg-color-danger");
         if(c.value.length > 7) {
-            c.classList.add("celula-saturada");
+            c.classList.add("input--bg-color-danger");
             celulasSaturadas++;
         }
     }
     
     if(celulasSaturadas > 0) {
         setTimeout(() => {
-            const motivoDeSaturacao =  document.querySelector(".artigo__details-motivo-de-red-cells");
+            const motivoDeSaturacao =  document.querySelector(".artigo__details--motivo-de-celulas-vermelhas");
 
             menu.abrirArtigo("ajuda");
             motivoDeSaturacao.setAttribute("open", "");
@@ -56,7 +56,7 @@ function destacarCelulasComConteudoOmisso() {
 function removerDestaqueDeRedCells() {
     const celulas = document.querySelectorAll("[data-totalgeral], [readonly]");
 
-    for (const c of celulas) c.classList.remove("celula-saturada");
+    for (const c of celulas) c.classList.remove("input--bg-color-danger");
 }
 
 const aqd = {

@@ -3,29 +3,24 @@
         display: none;
     }
 }
-
 .ficha {
     width: var(--layout-width);
     margin: 30px auto 0;
     font-size: 16px;
 }
-
 .ficha__linha-de-emblema-e-titulo {
     display: grid;
     grid-template-columns: 160px 638px;
     grid-column-gap: 132px;
     margin-bottom: 5px;
 }
-
 .ficha__col-de-emblema {
     justify-self: start;
 }
-
 .ficha__emblema {
     display: block;
     margin: auto;
 }
-
 .ficha__span-descricao-de-emblema {
     display: block;
     text-align: center;
@@ -34,13 +29,11 @@
     text-transform: uppercase;
     line-height: 1.2;
 }
-
 .ficha__col-de-titulo {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-
 .ficha__titulo {
     font-size: 18px;
     font-weight: 700;
@@ -49,13 +42,9 @@
     line-height: 1.2;
     margin-bottom: 20px;
 }
-
 .ficha__span-mod-sis-h05 {
     font-size: 14px;
 }
-
-/* Linha de Geolocalização */
-
 .ficha__linha-de-endereco {
     display: grid;
     grid-template-columns: 95px 186px 218px 258px 66px;
@@ -63,44 +52,34 @@
     margin-bottom: 8px;
     width: 905px;
 }
-
 .ficha__linha-de-endereco__col {
     display: grid;
     grid-template-rows: 20px 30px;
 }
-
 .ficha__linha-de-endereco__col--provincia {
     grid-area: provincia;
 }
-
 .ficha__linha-de-endereco__col--distrito {
     grid-area: distrito;
 }
-
 .ficha__linha-de-endereco__col--us {
     grid-area: us;
 }
-
 .ficha__linha-de-endereco__col--ano {
     grid-area: ano;
 }
-
 .ficha__linha-de-endereco label {
     text-align: center;
     font-weight: 700;
 }
-
 .ficha__linha-de-endereco input {
     display: block;
     width: calc(100% - 5px);
     text-align: center;
 }
-
 .ficha__linha-de-endereco input::-webkit-calendar-picker-indicator {
     display: none !important;
 }
-
-
 /* Cabecalho da ficha */
 .ficha__body__header {
     display: grid;
@@ -110,7 +89,6 @@
     font-weight: 700;
     
 }
-
 @media screen {
     .ficha__body__header {
         position: sticky;
@@ -119,37 +97,30 @@
         z-index: 333;
     }
 }
-
-/* Col1 */
 .ficha__header__col-com-titulo-linhas {
     flex-direction: column;
 }
-
 .ficha__header__col-com-titulo-linhas * {
     display: block;
     text-align: center;
     margin: 2px 0;
 }
-
 .ficha__header__col-com-titulo-colunas-e-periodo {
     display: grid;
     grid-template-rows: calc(155px / 3) calc(155px - 155px / 3);
 }
-
 .ficha__header__box-de-titulo-colunas {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 0 4px;
 }
-
 .ficha__header__box-periodo-de-reporte {
    display: grid;
    grid-template-rows: repeat(2, 43.93px);
    justify-items: center;
    align-items: center;
 }
-
 .box-periodo-de-reporte__col-de-inputs {
     display: grid;
     grid-template-columns: 50px 5px 50px 16px 50px 5px 50px;
@@ -157,57 +128,46 @@
     justify-content: center;
     min-height: 22px;
 }
-
 .box-periodo-de-reporte__col-de-inputs input {
     text-align: center;
     font-style: italic;
 }
-
 .ficha__header__col-de-nums-de-colunas {
     display: grid;
     grid-template-rows: repeat(3, calc(155px / 3));
 }
-
 .ficha__grid-template-cols-3 {
     display: grid;
     grid-template-columns: repeat(3, calc(193px / 3));
     text-align: center;
 }
-
-/* Col5 */
 .ficha__header__col-de-total {
     display: grid;
     grid-template-rows: calc(155px / 3) calc(155px - 155px / 3);
 }
-
 /* Corpo da ficha */
 .ficha__body__grid-template-cols-10 {
     display: grid;
     grid-template-columns: 95px 40px 300px repeat(6, calc(193px / 3)) 120px;
     line-height: 1.4;
 }
-
 .ficha__col-de-pacotes-apss {
     display: grid;
     grid-template-rows: 120px 220px 130px 330px;
     margin-top: -2px;
 }
-
 @media screen and (max-width: 945px) {
     :root {
         --thick-border-style: 1px solid var(--cor-de-borda);
     }
-
     .ficha__col-de-pacotes-apss {
         margin-top: -1px;
     }
 } 
-
 .ficha__col-de-pacotes-apss__subcol {
     max-width: 95px;
     position: relative;
 }
-
 .ficha__span--rotate {
     display: block;
     transform: rotate(-90deg);
@@ -215,7 +175,6 @@
     letter-spacing: .5px;
     text-align: center;
 }
-
 /* Coluna de linhas e de indicadores e inputs*/
 /* 120px 230px 120px 330px;*/
 .ficha__col-de-nums-de-linhas,
@@ -224,43 +183,51 @@
     display: grid;
     grid-template-rows: 120px 131px 89px 130px repeat(3, calc(330px / 3));
 }
-
 .ficha__num-de-linha.--highlight {
     background-color: var(--orange);
     color: var(--cor-de-texto);
 }
-
 .ficha__col-de-indicadores span {
     padding: 0 4px;
 }
-
 .ficha__col-de-indicadores sup {
     font-size: 11px;
 }
-
 .ficha__col-de-indicadores em {
     font-style: italic;
     text-decoration: underline;
 }
-
 .ficha__col-de-inputs {
     display: grid;
     grid-template-columns: 64.33px;
     overflow-x: hidden;
 }
-
 .ficha__col-de-inputs--total-geral {
     grid-template-columns: 120px;
 }
-
 .ficha__col-de-inputs * {
     display: block;
     max-width: 100% ;
 }
-
-
+[data-totalgeral]:focus,
+.input-nao-celular:focus {
+    border-bottom: 2px solid var(--blue);
+    background-color: var(--greenyellow);
+}
+@media screen {
+    .input--realcar-totais {
+        background-color: var(--yellow);
+    }
+}
+.input--bg-color-danger {
+    background-color: var(--cor-de-risco);
+    color: var(--yt)
+}
+.input--bg-color-dark {
+    background-color: var(--fullblack);
+    color: var(--yt)
+}
 /* Rodape da ficha */
-
 .ficha__rodape {
     display: grid;
     grid-template-columns: 364px 275px 1fr;
@@ -270,37 +237,30 @@
     position: relative;
     min-height: 48px;
 }
-
 .ficha__rodape__col {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .ficha__rodape label {
     margin-bottom: 10px;
     font-weight: 700;
 }
-
 .ficha__rodape__input-nome {
     width: 280px;
     text-align: center;
 }
-
 .ficha__rodape__input-assinatura {
     width: 240px;
     text-align: center;
 }
-
 .ficha__rodape__input-data {
    width: 186px;
    text-align: center;
 }
-
 .ficha__nota-normas-de-preenchimento {
     display: none;
 }
-
 @media print {
     .ficha__nota-normas-de-preenchimento {
         display: block;

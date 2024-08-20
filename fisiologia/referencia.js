@@ -4,7 +4,7 @@ const referencia = {
     retornarIndicador(inputTarget) {
         const inputTargetAndSiblings = inputTarget.parentElement.children;
         const indicadores = document.querySelectorAll(".ficha__col-de-indicadores span");
-        const indicadorOutput = document.querySelector(".reference-row__output--indicador");
+        const indicadorOutput = document.querySelector(".reference__output--indicador");
 
         let inputIndex;
         for (let i in inputTargetAndSiblings) {
@@ -16,8 +16,8 @@ const referencia = {
     },
 
     retornarFaixaEtariaEsexo(inputTarget) {
-        const faixaEtariaOutput = document.querySelector(".reference-row__output--idade");
-        const sexoOutput = document.querySelector(".reference-row__output--sexo");
+        const faixaEtariaOutput = document.querySelector(".reference__output--idade");
+        const sexoOutput = document.querySelector(".reference__output--sexo");
 
         let faixaEtaria = inputTarget.parentElement.dataset.faixaetaria;
         let sexo = inputTarget.parentElement.dataset.sexo;
@@ -27,7 +27,7 @@ const referencia = {
     },
 
     retornarVazio() {
-        const outputs = document.querySelectorAll(".reference-row__output");
+        const outputs = document.querySelectorAll(".reference__output");
         for (const o of outputs) o.value = "";
     }
 }

@@ -34,18 +34,18 @@
         </script>
         <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do totalizador. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
     </head>
-    <body ontouchstart="">
+    <body id="body" ontouchstart="">
         <header class="header --no-print">
-            <div class="layout-row layout-row--header">
-                <a href=index.html class=header__logo>
-                    Totalizador de Resumo <span class="logo__span--hide-on-screen-s">Trimestral</span>
+            <div class="layout-row layout-row--of-header layout-row--no-padding">
+                <a href=index.html id="logo">
+                    Totalizador de Resumo <span class="logo__snippet--hide-on-screen-til-360">Trimestral</span>
                     de APSS<span class="logo__sigla-pp">/PP</span>
                 </a>
                 <div role="navigation" class="header__menu --display-flex-y-center">
                     <ul class="header__menu__ul --display-flex-y-center">
-                        <li class="header__menu__li header__menu__li--realcar-totais header__menu__li--first-child">
-                            <input type=checkbox id="checkbox-realcar-totais" class="header__menu__checkbox header__child--cursor">
-                            <label for="checkbox-realcar-totais" class="header__menu__label --display-flex-y-center header__child--cursor">
+                        <li class="header__menu__li header__menu__li--realcar-totais">
+                            <input type=checkbox id="checkbox-realcar-totais" class="header__menu__checkbox --cursor-pointer">
+                            <label for="checkbox-realcar-totais" class="header__menu__label --display-flex-y-center --cursor-pointer">
                                 Realçar&nbsp;totais
                             </label>
                         <li class="header__menu__li">
@@ -54,22 +54,22 @@
                             <button class="header__menu__btn header__menu__btn--esvaziar-ficha">Esvaziar ficha</button>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--imprimir">
-                                <span class="header__menu__item--desktop header__child--cursor">Imprimir</span>
-                                <span class="header__menu__item--mobile header__child--cursor">Salvar&nbsp;como&nbsp;PDF</span>
+                                <span class="header__menu__item--hide-on-mobile --cursor-pointer">Imprimir</span>
+                                <span class="header__menu__item--hide-on-desktop --cursor-pointer">Salvar&nbsp;como&nbsp;PDF</span>
                             </button>
-                        <li class="header__menu__li header__menu__item--desktop">
+                        <li class="header__menu__li header__menu__item--hide-on-mobile">
                             <button class="header__menu__btn header__menu__btn--sobre">Sobre</button>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--ajuda">
                                 Ajuda
                             </button>
-                        <li class="header__menu__li header__menu__item--mobile">
+                        <li class="header__menu__li header__menu__item--hide-on-desktop">
                             <button class="header__menu__btn header__menu__btn--partilhar">Partilhar...</button>
                     </ul>
                 </div>
             </div>
         </header>
-        <main>
+        <main id="main">
             <div class="ficha">
                 <header>
                     <div class="ficha__linha-de-emblema-e-titulo">
@@ -259,7 +259,7 @@
     
                             <input type="number" name="l3-c1" id="l3-c1" min="0" data-totalgrupo="l3-c1c2" data-totalgrupooutput="l3-c3" data-totalgeral="l3-c1c2c4c5" data-totalgeraloutput="l3-c7" class="--border-t-thick" />
     
-                            <div class="celula-n-a" data-faixaetaria="0-14 anos"></div>
+                            <div class="input--bg-color-dark" data-faixaetaria="0-14 anos"></div>
     
                             <input type="number" name="l5-c1" id="l5-c1" min="0" data-totalgrupo="l5-c1c2" data-totalgrupooutput="l5-c3" data-totalgeral="l5-c1c2c4c5" data-totalgeraloutput="l5-c7" class="--border-t-thick" />
     
@@ -275,7 +275,7 @@
     
                             <input type="number" name="l3-c1" id="l3-c1" min="0" data-totalgrupo="l3-c1c2" data-totalgrupooutput="l3-c3" data-totalgeral="l3-c1c2c4c5" data-totalgeraloutput="l3-c7" class="--border-t-thick --border-l-thick" />
     
-                            <div class="celula-n-a" data-faixaetaria="0-14 anos"></div>
+                            <div class="input--bg-color-dark" data-faixaetaria="0-14 anos"></div>
     
                             <input type="number" name="l5-c1" id="l5-c1" min="0" data-totalgrupo="l5-c1c2" data-totalgrupooutput="l5-c3" data-totalgeral="l5-c1c2c4c5" data-totalgeraloutput="l5-c7" class="--border-t-thick --border-l-thick" />
     
@@ -287,13 +287,13 @@
                             <input type="number" readonly class="l1-c3 --border-l-thick"/>
                             <input type="number" readonly class="l2-c3 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l3-c3 --border-t-thick --border-l-thick"/>
-                            <div class="celula-n-a" data-faixaetaria="0-14 anos"></div>
+                            <div class="input--bg-color-dark" data-faixaetaria="0-14 anos"></div>
                             <input type="number" readonly class="l5-c3 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l6-c3 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l7-c3 --border-t-thick --border-l-thick"/>
                         </div>
                         <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-anos-m --border-b-thick --border-l-thick" data-faixaetaria="15/+ anos" data-sexo="Masc.">
-                            <div class="celula-n-a" data-faixaetaria="&ge; 15 anos"></div>
+                            <div class="input--bg-color-dark" data-faixaetaria="&ge; 15 anos"></div>
     
                             <input type="number" name="l2-c4" id="l2-c4" min="0" data-totalgrupo="l2-c4c5" data-totalgrupooutput="l2-c6" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick" />
     
@@ -308,7 +308,7 @@
                             <input type="number" name="l7-c4" id="l7-c4" min="0" data-totalgrupo="l7-c4c5" data-totalgrupooutput="l7-c6" data-totalgeral="l7-c1c2c4c5" data-totalgeraloutput="l7-c7" class="--border-t-thick" />
                         </div>
                         <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-f --border-b-thick" data-faixaetaria="15/+ anos" data-sexo="Fem.">
-                            <div class="celula-n-a" data-faixaetaria="&ge; 15 anos"></div>
+                            <div class="input--bg-color-dark" data-faixaetaria="&ge; 15 anos"></div>
     
                             <input type="number" name="l2-c4" id="l2-c4" min="0" data-totalgrupo="l2-c4c5" data-totalgrupooutput="l2-c6" data-totalgeral="l2-c1c2c4c5" data-totalgeraloutput="l2-c7" class="--border-t-thick --border-l-thick" />
     
@@ -323,7 +323,7 @@
                             <input type="number" name="l7-c4" id="l7-c4" min="0" data-totalgrupo="l7-c4c5" data-totalgrupooutput="l7-c6" data-totalgeral="l7-c1c2c4c5" data-totalgeraloutput="l7-c7" class="--border-t-thick --border-l-thick" />
                         </div>
                         <div class="ficha__col-de-inputs ficha__col-de-inputs-15-mais-anos-total --border-b-thick">
-                            <div class="celula-n-a" data-faixaetaria="&ge; 15 anos"></div>
+                            <div class="input--bg-color-dark" data-faixaetaria="&ge; 15 anos"></div>
                             <input type="number" readonly class="l2-c6 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l3-c6 --border-t-thick --border-l-thick"/>
                             <input type="number" readonly class="l4-c6 --border-t-thick --border-l-thick"/>
@@ -359,20 +359,20 @@
                 <p class="ficha__nota-normas-de-preenchimento"><strong>NOTA:</strong> Normas de preenchimento do Resumo Trimestral no verso.</p>
             </div>
 
-            <div class="main__container-de-campo-de-nota layout-row">
-                <textarea class="main__campo-de-nota input-nao-celular" id="input-comentarios" placeholder="Comentários sobre o resumo (se necessário)." rows=3></textarea>
+            <div class="layout-row layout-row--report-comments layout-row--no-padding">
+                <textarea class="main__campo-de-comentarios input-nao-celular" id="input-comentarios" placeholder="Comentários sobre o resumo (se necessário)." rows=3></textarea>
             </div>
 
-            <div class="reference-container --no-print">
-                <div class="layout-row reference-row">
-                    <span class="reference-row__label">Indicador:</span> 
-                    <output class="reference-row__output reference-row__output--indicador --display-flex-y-center"></output>
+            <div class="reference --no-print">
+                <div class="layout-row layout-row--of-reference">
+                    <span class="reference__label">Indicador:</span> 
+                    <output class="reference__output reference__output--indicador --display-flex-y-center"></output>
 
-                    <span class="reference-row__label">Faixa etária:</span> 
-                    <output class="reference-row__output reference-row__output--idade --display-flex-xy-center --fw-700"></output>
+                    <span class="reference__label">Faixa etária:</span> 
+                    <output class="reference__output reference__output--idade --display-flex-xy-center --fw-700"></output>
 
-                    <span class="reference-row__label">Sexo:</span> 
-                    <output class="reference-row__output reference-row__output--sexo --display-flex-xy-center --fw-700"></output>
+                    <span class="reference__label">Sexo:</span> 
+                    <output class="reference__output reference__output--sexo --display-flex-xy-center --fw-700"></output>
                 </div>
             </div>
         </main>
@@ -451,11 +451,11 @@
             </div>
         </section>
 
-        <section class="sessao-de-artigos --no-print">
+        <section class="seccao-de-artigos --no-print">
             <article id="sobre" class="artigo artigo--sobre layout-row layout-row--artigo-sobre">
                 <h2 class="artigo__titulo artigo__titulo--nivel-1">Visão geral sobre o totalizador</h2>
                 <figure>
-                    <img alt="Totalizador de Resumo Trimestral de APSS/PP" src=imagens/totalizador-de-resumo-trimestral-de-apss-e-pp.png class="artigo__img artigo__img--sobre-o-tot">
+                    <img alt="Totalizador de Resumo Trimestral de APSS/PP" src=imagens/totalizador-de-resumo-trimestral-de-apss-e-pp.png class="artigo__img artigo__img--center">
                 </figure>
                 
                 <p>
@@ -500,23 +500,23 @@
                 <ul class="artigo__lista artigo__lista--ul">
                     <li>Não alerta sobre discrepância de dados, portanto, a análise da concordância dos dados é inteiramente dependente do usuário.</li>
                 </ul>
-                <button class="artigo__btn-fechar artigo__btn-fechar--sobre" title="Fechar">&times;</button>
+                <button class="artigo__btn-x artigo__btn-x--fechar-sobre" title="Fechar">&times;</button>
             </article>
 
-            <article class="artigo artigo--ajuda layout-row layout-row--artigo-ajuda">
+            <article class="artigo artigo--ajuda layout-row layout-row--no-padding">
                 <h2 class="artigo__titulo artigo__titulo--nivel-1 artigo__titulo--ajuda-e-procedimentos">Ajuda e Procedimentos</h2>
 
-                <details>
-                    <summary>Realçar totais</summary>
-                    <p>Adiciona cor de fundo cinzenta a todas as células dos totais. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distinguí-las facilmente das outras células. Muito útil em celulares.</p>
+                <details class="artigo__details">
+                    <summary class="details__summary">Realçar totais</summary>
+                    <p>Adiciona cor de fundo amarela às células dos totais. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distinguí-las facilmente das outras células. Muito útil em celulares.</p>
                     <p class="artigo__p--destaque --sem-sombra">A cor de realce de fundo  das células não afecta a impressão.</p>
                 </details>
-                <details>
-                    <summary >Ir para a linha...</summary>
+                <details class="artigo__details">
+                     <summary class="details__summary">Ir para a linha...</summary>
                     <p>Abre um campo no qual pode digitar um número de linha no formato <b>LETRANÚMERO</b> (ex.: <b>E3</b>) e, uma vez digitado o número, a página rola até a linha correspondente ao número.</p>
                 </details>
-                <details>
-                    <summary>Esvaziar ficha</summary>
+                <details class="artigo__details">
+                    <summary class="details__summary">Esvaziar ficha</summary>
                     <p>Comando para limpar parcial ou totalmente a ficha após confirmação da acção na caixa de diálogo subsequente.</p>
                     <figure class="details__moldura details__moldura--margin-l">
                         <img src="imagens/caixa-de-dialogo-para-esvaziamento-da-ficha.png" alt="Caixa de diálogo para esvaziamento da ficha" class="artigo__img"/>
@@ -525,26 +525,26 @@
                     </figure>
 
                 </details>
-                <details class="details-salvar-ficha-como-pdf">
-                    <summary>Salvar ficha como PDF</summary>
+                <details class="artigo__details artigo__details--salvar-ficha-como-pdf">
+                    <summary class="details__summary">Salvar ficha como PDF</summary>
                     <h3 class="artigo__titulo artigo__titulo--nivel-2 artigo__titulo--cor-discreta">No computador:</h3>
                     <ol class="artigo__lista artigo__lista--ol">
                         <li>
-                            Clique na opção <mark>Imprimir</mark> no menu do totalizador.
+                            Clique na opção <mark class="details__mark">Imprimir</mark> no menu do totalizador.
                         <li>
-                            Na janela que abrirá, no campo de <mark>Impressora</mark> ou <mark>Destino</mark>
-                            selecione a opção <mark>Salvar&nbsp;como&nbsp;PDF</mark>.
+                            Na janela que abrirá, no campo de <mark class="details__mark">Impressora</mark> ou <mark class="details__mark">Destino</mark>
+                            selecione a opção <mark class="details__mark">Salvar&nbsp;como&nbsp;PDF</mark>.
                         <li >
-                            Por fim, clique em <mark>Salvar</mark> e escolha um destino no seu computador.
+                            Por fim, clique em <mark class="details__mark">Salvar</mark> e escolha um destino no seu computador.
                     </ol>
 
                     <h3 class="artigo__titulo artigo__titulo--nivel-2 artigo__titulo--cor-discreta">No celular / tablet:</h3>
                     <ol class="artigo__lista artigo__lista--ol">
                         <li>
-                            Toque na opção <mark>Salvar como PDF</mark> no cabeçalho do totalizador.
+                            Toque na opção <mark class="details__mark">Salvar como PDF</mark> no cabeçalho do totalizador.
                         </li>
                         <li>
-                            Na janela seguinte, se não vir a opção <mark>Guardar como PDF</mark>, toque em<mark><b>Selec. impressora</b></mark>.
+                            Na janela seguinte, se não vir a opção <mark class="details__mark">Guardar como PDF</mark>, toque em<mark class="details__mark"><b>Selec. impressora</b></mark>.
                         </li>
 
                         <figure class="details__moldura">
@@ -552,7 +552,7 @@
                         </figure>
                            
                         <li>
-                          De seguida, selecione ou mantenha a opção <mark>Guardar como PDF</mark> e por fim, toque no simbolo em forma de disquete e escolha um destino no seu celular para salvar o resumo.
+                          De seguida, selecione ou mantenha a opção <mark class="details__mark">Guardar como PDF</mark> e por fim, toque no simbolo em forma de disquete e escolha um destino no seu celular para salvar o resumo.
                         </li>
 
                         <figure class="details__moldura">
@@ -560,13 +560,15 @@
                         </figure>
                     </ol>
                 </details>
-                <details class="artigo__details-motivo-de-red-cells">
-                    <summary>Algumas células mudaram de cor de fundo para vermelho</summary>
-                    <p>As células do totalizador têm um tamanho para conter visivelmente 7 algarismos no máximo, isto é, mostram valores até, no máximo, <span class="number-format">9999999</span>. Quando uma célula recebe um número com mais de 7 algarismos, dá um alerta ficando vermelha e depois abrindo esta mensagem de texto para alertá-lo sobre a omissão dos algarismos e o real motivo.</p>
+                <details class="artigo__details artigo__details--border-b artigo__details--motivo-de-celulas-vermelhas">
+                    <summary class="details__summary">Algumas células mudaram de cor de fundo para vermelho</summary>
+                    <p>As células do totalizador têm um tamanho para conter visivelmente 7 algarismos no máximo, isto é, mostram valores até <span class="number-format">9999999</span>. Quando uma célula recebe um número com mais de 7 algarismos, dá um alerta ficando vermelha e depois abrindo esta mensagem de texto para alertá-lo sobre a omissão dos algarismos e o real motivo.</p>
 
                     <p class="artigo__p--destaque">Para um país como Moçambique, onde o número de habitantes é de pouco mais de 30 milhões (<a href="https://energypedia.info/wiki/Moçambique:_Informação_sobre_o_País" target="_blank">dados demográficos de 2019</a>), podemos presumir que nenhuma Unidade Sanitária actualmente tem um número mensal de dados de algum indicador, de qualquer que seja a sua natureza, acima de <span class="number-format">9999999</span>.</p>
                 </details>
-                <button class="artigo__btn-fechar artigo__btn-fechar--ajuda" title="Fechar">&times;</button>
+
+                <p class="artigo-ajuda__p--contactar-suporte">Se os tópicos acima não cobrem a sua dúvida. Pode ainda solicitar suporte por <a href="mailto:quinamine.aderitofelix@gmail.com?subject=Totalizador%20de%20Resumo%20Trimestral%20de%20APSS%2FPP">Email</a> ou <a href="https://wa.me/258846709901/?text=Olá%2C+Quinamine!+Sobre+o+*totalizador+de+resumo+trimestral+de+APSS%2FPP*%2C+tenho+a+seguinte+dúvida%3A%20">WhatsApp</a>.</p>
+                <button class="artigo__btn-x artigo__btn-x--fechar-ajuda" title="Fechar">&times;</button>
             </article>
         </section>
         <footer class="footer --no-print">
@@ -622,7 +624,7 @@
                     Criado com atenção e 💙 por <a href=https://quinamine.github.io/aderito-felix-quinamine/index.html title="Acessar biografia &raquo;">Adérito Félix Quinamine</a>
                     | © <span class="footer__current-year"></span> - Totalizador de Resumo Trimestral de APSS/PP
                 </p>
-                <a href=#root class=footer__link-back-to-top>Rolar para o topo</a>
+                <a href=#root class=footer__link--back-to-top>Rolar para o topo</a>
             </div>
             <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2024-03-04">04/03/2024</time> Última actualização: Agosto/2024.</p>
         </footer>
