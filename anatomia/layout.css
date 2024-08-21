@@ -91,6 +91,10 @@
     font-weight: 700;
     line-height: 1.2;
     padding: 12px 0 8px 15px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 @media screen and (min-width: 1024px) {
     #logo {
@@ -134,17 +138,6 @@
     opacity: .5;
     background-color: var(--gray--light)
 }
-.header__menu__item--hide-on-mobile {
-    display: none;
-}
-@media screen and (min-width: 1024px) {
-    .header__menu__item--hide-on-mobile {
-        display: flex;
-    }
-    .header__menu__item--hide-on-desktop {
-        display: none;
-    }
-}
 .header__menu__checkbox {
     width: 12px;
     height: 11px;
@@ -162,6 +155,17 @@
     color: var(--cor-de-texto);
     font-size: 12px;
     min-height: 44px;
+}
+.header__menu__item--hide-on-mobile {
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+    .header__menu__item--hide-on-mobile {
+        display: flex;
+    }
+    .header__menu__item--hide-on-desktop {
+        display: none;
+    }
 }
 /* MAIN */
 @media screen and (max-width: 1303px) {
@@ -521,7 +525,7 @@ details[open] .details__summary {
 .artigo__details--salvar-ficha-como-pdf li {
     line-height: 2;
 }
-/* Dialog-box-response-to-user-actions */
+/* Caixas de diálogo */
 .dialog-box-default {
     width: 100%;
     max-width: var(--layout-width);
@@ -595,7 +599,6 @@ details[open] .details__summary {
     width: 23px;
     cursor: pointer;
 }
-/* Caixa de diálogo ir para */
 .dialog-box-ir-para {
     justify-content: space-between;
     padding: 4px;
@@ -776,7 +779,7 @@ details[open] .details__summary {
     background-color: var(--black--alpha-5);
     z-index: 888;
 }
-/* Classes Reutilizaveis */
+/* Classes Reutilizáveis */
 .--cursor-pointer {
     cursor: pointer;
 }
