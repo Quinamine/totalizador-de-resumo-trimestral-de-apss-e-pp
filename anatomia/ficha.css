@@ -213,10 +213,11 @@
 .input-nao-celular:focus {
     border-bottom: 2px solid var(--blue);
     background-color: var(--greenyellow);
+    color: var(--cor-de-texto);
 }
 @media screen {
     .input--realcar-totais {
-        background-color: var(--yellow);
+        background-color: var(--cor-de-realce-de-totais);
     }
 }
 .input--bg-color-danger {

@@ -20,16 +20,15 @@
     --gray--light: #f0f0f0;
     --blue: #0060EE;
     --blue--light: #2573b5;
+    --blue--highlight: lightblue;
     --purple: rgb(116, 116, 235);
     --orange: #faa032;
-    --yellow: yellow;
-    --greenyellow:greenyellow;
+    --cor-de-realce-de-totais: #ffff71;
+    --greenyellow: #adff2f;
     --brown: brown;
     --reference-bgc: var(--blue--light);
     --layout-width: 945px;
     --input-font-size: 16px;
-    --thin-border-style: 1px solid var(--cor-de-borda);
-    --thick-border-style: 2px solid var(--cor-de-borda);
 }
 @media print {
     :root {
@@ -64,6 +63,11 @@
     margin: 0 auto;
     padding: 0 15px;
 }
+@media screen and (min-width: 1304px) {
+    .layout-row {
+        padding: 0;
+    }
+}
 .layout-row--no-padding {
     padding: 0;
 }
@@ -93,11 +97,11 @@
         padding: 0;
     }
 }
-.logo__snippet--hide-on-screen-til-360 {
+.logo__snippet--hide-on-screen-til-359px {
     display: none;
 }
 @media screen and (min-width: 360px) {
-    .logo__snippet--hide-on-screen-til-360 {
+    .logo__snippet--hide-on-screen-til-359px {
         display: initial;
     }
 }
@@ -160,7 +164,7 @@
     min-height: 44px;
 }
 /* MAIN */
-@media screen and (max-width: 1304px) {
+@media screen and (max-width: 1303px) {
     #main {
         max-width: 100%;
         overflow: auto;
@@ -179,7 +183,7 @@
 .main__campo-de-comentarios {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    min-width: 929px;
+    width: calc(var(--layout-width) - 16px);
     height: 60px;
     padding: 5px;
     border: 1px solid var(--cor-de-borda);
@@ -605,7 +609,7 @@ details[open] .details__summary {
 }
 @media screen and (max-width: 1023px) {
     .dialog-box-ir-para {
-        right: calc(50vw - 241px / 2);
+        right: calc(50vw - 274px / 2);
     }
 }
 .dialog-box-ir-para.--open {
