@@ -5,6 +5,7 @@
     --cor-de-risco: #dd0000;
     --cor-de-realce: #dce4f4;
     --cor-do-rodape: #f0f0f0;
+    --heart-color: #f97171;
     --fullred: #ff0000;
     --fullblack: #000000;
     --black--alpha-5: rgba(0, 0, 0, .5);
@@ -268,6 +269,9 @@
 }
 .footer__link--back-to-top:visited {
     color: var(--gray)
+}
+.footer__p__heart {
+    color: var(--heart-color);
 }
 /* LINHA DE REFERENCIA */
 .reference {
