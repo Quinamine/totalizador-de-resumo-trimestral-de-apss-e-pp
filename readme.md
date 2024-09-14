@@ -25,7 +25,7 @@ O **Totalizador de Resumo Trimestral de APSS/PP** é um serviço online gratuito
 
 >[!NOTE]
 >
-> O totalizador garante um resumo mensal correctamente totalizado, contudo, a qualidade de um resumo mensal não se garante com apenas uma correcta totalização. Factores dependententes do usuário (Profissional de Saúde) como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do mês ou período em alusão, entre outros, influenciam sobremaneira na qualidade de um resumo mensal.
+> O totalizador garante um resumo mensal correctamente totalizado, contudo, a qualidade de um resumo não se limita apenas à uma correcta totalização. Outros factores não dependententes do totalizador como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do mês ou período em alusão, concordância dos dados, entre outros, influenciam sobremaneira na qualidade de um resumo mensal.
 
 
 ## Qual é o destino dos dados que eu insiro?
