@@ -95,6 +95,9 @@
         background-color: var(--yt);
         z-index: 333;
     }
+    .body-com-topo-propaganda .ficha__body__header {
+        top: 36px;
+    }
 }
 .ficha__header__col-com-titulo-linhas {
     flex-direction: column;
