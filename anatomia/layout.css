@@ -626,6 +626,11 @@ details[open] .details__summary {
 .body-com-topo-propaganda .dialog-box-ir-para.--open {
     top: 36px;
 }
+@media screen and (max-width: 577px) {
+    .body-com-topo-propaganda .dialog-box-ir-para.--open {
+        top: 53px;
+    }
+}
 .dialog-box-ir-para__input-linha {
     width: 188px;
     padding: 2px 0 2px 5px;
@@ -898,6 +903,15 @@ details[open] .details__summary {
     position: absolute;
     left: 15px;
     top: calc(50% - 19px / 2);
+}
+.topo-propaganda__link__trecho-acessar {
+    text-decoration: underline;
+    cursor: pointer;
+}
+@media screen and (max-width: 326px) {
+    .topo-propaganda__link__trecho-acessar {
+        display: none;
+    }
 }
 .topo-propaganda__btn {
     background-color: var(--blue--light);
