@@ -113,4 +113,8 @@ window.addEventListener("load", () => {
     // Fechar Topo Propaganda 
     const btnXDetopoProgaganda = document.querySelector(".topo-propaganda__btn");
     btnXDetopoProgaganda.addEventListener("click", fecharTopoPropaganda);
+    // Focar campo de observacoes
+    const inputObs = document.querySelector(".obs__input");
+    inputObs.addEventListener("focus", () => inputObs.parentElement.classList.add("--focus"));
+    inputObs.addEventListener("focusout", () => inputObs.parentElement.classList.remove("--focus"));
 });

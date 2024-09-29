@@ -62,7 +62,9 @@ const menu = {
             dialogBox: document.querySelector(".dialog-box-esvaziar-ficha"),
             abrirDialogBox() { 
                 const inputsDaFicha = document.querySelectorAll(".ficha input");
+                const campoDeObs = document.querySelector(".obs__input");
                 let inputFilled = 0;
+                campoDeObs.textContent.length > 0 && (inputFilled = 1);
                 for(const input of inputsDaFicha) {
                     input.value.length > 0 && inputFilled++;
                 }
@@ -90,6 +92,9 @@ const menu = {
                         let idDeInputNaoCelular = cb.dataset.for
                         let inputNaoCelular = document.getElementById(`${idDeInputNaoCelular}`);
                         inputNaoCelular.value = "";
+                        if(inputNaoCelular.matches("#input-obs")) {
+                            inputNaoCelular.textContent = "";
+                        }
                         localStorage.removeItem(`${keyPrefix}-${inputNaoCelular.id}`);
                     }
                 }
@@ -99,8 +104,8 @@ const menu = {
         }
     },
     imprimirFicha() {
-        const comentarios = document.querySelector(".main__campo-de-comentarios");
-        comentarios.value === "" ? comentarios.parentElement.classList.add("--no-print") : comentarios.parentElement.classList.remove("--no-print");
+        const comentarios = document.querySelector(".obs__input");
+        comentarios.textContent === "" ? comentarios.parentElement.classList.add("--no-print") : comentarios.parentElement.classList.remove("--no-print");
         window.print()
     },
     abrirArtigo(artigo) {
