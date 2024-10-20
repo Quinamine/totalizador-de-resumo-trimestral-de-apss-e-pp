@@ -16,21 +16,21 @@ O **Totalizador de Resumo Trimestral de APSS/PP** é um serviço online gratuito
 
 ## O que eu preciso dispor para, e como utilizar o totalizador?
 
-* Um celular ou computador com acesso à internet.
+* Um celular ou computador com acesso à internet;
 
-* Ter colhido os dados de todos os indicadores da ficha nas fontes primárias (livro(s) de registo diário das actividades de apoio psicossocial e prevenção positiva) da sua Unidade Sanitária.
+* Ter colhido os dados de todos os indicadores da ficha nas respectivas fontes primárias (livro(s) de registo diário das actividades de apoio psicossocial e prevenção positiva) da sua Unidade Sanitária;
 
 * E por fim, preencher os dados nas células correspondentes em função das variáveis (indicador, sexo e faixa etária) e consequentemente os respectivos totais são, em tempo real, correcta e automaticamente calculados.
 
 
 >[!NOTE]
 >
-> O totalizador garante um resumo correctamente totalizado, contudo, a qualidade de um resumo não se limita apenas à uma correcta totalização. Outros factores não dependentes do totalizador como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do trimestre em reporte, concordância dos dados, entre outros, influenciam sobremaneira na qualidade de um resumo mensal.
+> O totalizador garante um resumo trimestral correctamente totalizado, contudo, um resumo trimestral de qualidade não se limita apenas à uma correcta totalização. Factores não dependentes do totalizador como preenchimento correcto dos livros de registo, colheita de dados abrangente a todas as fontes primárias (livros de registo) com informação do trimestre em reporte, concordância de dados, entre outros, influenciam sobremaneira na qualidade de um resumo trimestral.
 
 
 ## Qual é o destino dos dados que eu insiro?
 
-São guardados no seu celular ou computador, por meio de um recurso chamado [Web Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API) e você tem total controle sobre os dados, podendo mantê-los ou apagá-los por meio da opção "Esvaziar ficha" no menu do totalizador ou excluindo os dados de navegação (histórico) do navegador.
+São guardados no seu celular ou computador, por meio de um recurso chamado [Web Storage](https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API) e você tem total controle sobre os dados, podendo mantê-los ou apagá-los por meio da opção "Esvaziar ficha" no menu do totalizador ou excluindo os dados de navegação do seu navegador.
 
 
 ## Vantagens do totalizador
