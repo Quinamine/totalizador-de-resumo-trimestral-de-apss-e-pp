@@ -610,6 +610,10 @@ details[open] .details__summary {
     padding: 8px 15px;
     background-color: var(--yt);
     color: var(--gray--5);
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .dialog-box-default__btn-container {
     background: var(--gray--light);
