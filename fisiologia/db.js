@@ -41,7 +41,7 @@ const moz = {
             codigos: ["01020908", "01020909", "01020907", "01020904", "01020903", "01020906", "01020901"]
         }, 
         montepuez: { 
-            us: ["CS Linde", "CS Mapupulo", "CS Mirate", "CS Montepuez", "CS Nairoto", "CS Namanhumbiri", "CS Namueto", "CS Napai", "CS Niuhula", "CS Nropa ", "CS Ntapata", "HR Montepuez", "CS Napai"],
+            us: ["CS Linde", "CS Mapupulo", "CS Mirate", "CS Montepuez", "CS Nairoto", "CS Namanhumbiri", "CS Namueto", "CS Napai", "CS Niuhula", "CS Nropa ", "CS Ntapata", "HR Montepuez"],
             codigos: ["01021009", "01021014", "01021008", "01021015", "01021010", "01021011", "01021012", "", "01021016", "01021013", "01021007", "01021001"]
         },  
         mueda: { 
