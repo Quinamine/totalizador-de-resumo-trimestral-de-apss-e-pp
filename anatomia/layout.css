@@ -963,3 +963,37 @@ details[open] .details__summary {
     right: 15px;
     top: calc(50% - 19px / 2);
 }
+.topo-propaganda--festas-felizes {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000000000;
+    background-color: #f12d1d;
+    border-color: red;
+    min-height: 35.59px;
+}
+@media screen and (max-width: 578px) {
+    .topo-propaganda--festas-felizes {
+        min-height: 51.19px;
+    }
+}
+.topo-propaganda__paragrafo {
+    display: block;
+    font-size: 12px;
+    line-height: 1.3;
+    padding: 10px 48px 10px 60px;
+    font-weight: 700;
+    position: relative;
+    color: var(--yt);
+}
+.topo-propaganda__img {
+    border-radius: 50%;
+    border: 1px solid brown;
+    width: 38px;
+    position: absolute;
+    left: 15px;
+    top: calc(50% - 34.67px / 2);
+}
+.topo-propaganda__btn--background-tom-de-red {
+    background-color: brown;
+}
