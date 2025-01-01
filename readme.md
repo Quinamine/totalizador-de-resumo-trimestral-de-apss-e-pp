@@ -25,7 +25,7 @@ O **Totalizador de Resumo Trimestral de APSS/PP** é um serviço online gratuito
 
 >[!NOTE]
 >
-> O totalizador garante um resumo trimestral correctamente totalizado, porém, um resumo trimestral de qualidade não se limita apenas à uma correcta totalização. Outros factores (que não dependem do totalizador) como preenchimento correcto e legível dos livros de registo, colheita de dados de todos os livros de registo com informação do trimestre em reporte, cruzamento de dados, entre outros, influenciam consideravelmente na qualidade de um resumo trimestral.
+> O totalizador garante um resumo trimestral correctamente totalizado, porém, um resumo trimestral de qualidade não se limita apenas à uma correcta totalização. Outros factores (que não dependem do totalizador) como preenchimento correcto e legível dos livros de registo, colheita de dados de todos os livros de registo com informação do trimestre em reporte, cruzamento e concordância dos dados, entre outros, influenciam consideravelmente na qualidade de um resumo trimestral.
 
 
 ## Qual é o destino dos dados que eu insiro?
