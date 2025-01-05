@@ -2,7 +2,7 @@
 
 ![Trecho do Totalizador do Resumo Trimestral de APSS/PP](imagens/totalizador-de-resumo-trimestral-de-apss-e-pp.png)
 
-O **Totalizador de Resumo Trimestral de APSS/PP** é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo trimestral de APSS/PP (Apoio Psicossocial e Prevenção Positiva), por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo trimestral de APSS/PP actualmente vigente no Serviço Nacional de Saúde em Moçambique.
+O **Totalizador de Resumo Trimestral de APSS/PP** é um serviço online gratuito que auxilia na elaboração, como o nome sugere, do resumo trimestral de APSS/PP (Apoio Psicossocial e Prevenção Positiva) por meio do cálculo automático dos totais com base nos dados preenchidos pelo usuário. Foi criado de acordo com o modelo da ficha de resumo trimestral de APSS/PP actualmente vigente no Serviço Nacional de Saúde em Moçambique.
 
 
 ## Objectivos
@@ -25,7 +25,7 @@ O **Totalizador de Resumo Trimestral de APSS/PP** é um serviço online gratuito
 
 >[!NOTE]
 >
-> O totalizador garante um resumo trimestral correctamente totalizado, porém, um resumo trimestral de qualidade não se limita apenas à uma correcta totalização. Outros factores (que não dependem do totalizador) como preenchimento correcto e legível dos livros de registo, colheita de dados de todos os livros de registo com informação do trimestre em reporte, cruzamento e concordância dos dados, entre outros, influenciam consideravelmente na qualidade de um resumo trimestral.
+> O totalizador garante um resumo trimestral correctamente totalizado, porém, um resumo trimestral de qualidade não se limita apenas à uma correcta totalização. Outros factores (que não dependem do totalizador) como preenchimento correcto e legível dos livros de registo, colheita de dados de todos os livros de registo com informação do trimestre em reporte, cruzamento e concordância dos dados, entre outros, contribuem sobremaneira para a qualidade de um resumo trimestral.
 
 
 ## Qual é o destino dos dados que eu insiro?
