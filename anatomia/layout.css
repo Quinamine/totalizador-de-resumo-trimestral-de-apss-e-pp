@@ -187,7 +187,7 @@
     font-size: var(--input-font-size);
 }
 @media print {
-    .layout-row--obs{
+    .layout-row--obs {
         border: none;
         padding: 0;
     }
