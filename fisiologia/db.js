@@ -227,7 +227,7 @@ const moz = {
         },
         nampula: {
             us: ["CS 1 de Maio", "CS 25 de Setembro", "CS Anchilo", "CS Maratene", "CS Mental", "CS Mucova", "CS Mucuache", "CS Muhala Expansão", "CS Mutavarex", "CS Naholoco", "CS Namachilo (MOMALA)", "CS Namiconha", "CS Namicopo", "CS Namiepe", "CS Namutequeliua", "CS Napipine", "CS Niarro", "CS O.T.M.", "CS Penitenciária", "CS Saua Saua", "HC Nampula", "HG Marrere", "HM Nampula", "PS Anexo (Psiquiátrico)", "PS Mutauanha"],
-            codigos: ["1030108", "1030106", "1032007", "1032019", "1030116", "1032021", "1030122", "1030117", "1030120", "1032013", "1032014", "1032015", "1030113", "1030110", "1030112","1030109", "1030121", "1030114", "1030119", "1032020", "", "1030107", "1030102", "01030110", "1030111"]
+            codigos: ["01030108", "01030106", "01032007", "01032019", "01030116", "01032021", "01030122", "01030117", "01030120", "01032013", "01032014", "01032015", "01030113", "01030110", "01030112","01030109", "01030121", "01030114", "01030119", "01032020", "", "01030107", "01030102", "01030110", "01030111"]
         },
         rapale: {
             us: ["CS Caramaja", "CS Muleheia", "CS Mutive", "CS Mutovo", "CS Namaita", "CS Namucaua", "CS Natoa", "CS Rapale"],
