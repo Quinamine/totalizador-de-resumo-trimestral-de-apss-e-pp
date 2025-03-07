@@ -609,7 +609,6 @@ details[open] .details__summary {
 .dialog-box-default__title {
     padding: 8px 15px;
     background-color: var(--yt);
-    color: var(--gray--5);
     white-space: nowrap;
     width: 100%;
     overflow: hidden;
@@ -632,7 +631,7 @@ details[open] .details__summary {
     font-size: 13px;
     display: block;
     transition-duration: .4s;
-    color: var(--gray--5);
+    color: var(--cor-de-texto);
 }
 .dialog-box-default__btn:hover {
     background-color: var(--cor-de-realce);
