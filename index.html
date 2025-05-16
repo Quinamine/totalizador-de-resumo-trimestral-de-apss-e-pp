@@ -372,7 +372,7 @@
             </div>
             <div class="dialog-box-esvaziar-ficha">
                 <h3 class="dialog-box-esvaziar-ficha__titulo --fw-700">Esvaziar ficha</h3>
-                <p class="dialog-box-esvaziar-ficha__p--first">Tem certeza de que deseja esvaziar a ficha?</p>
+                <p class="dialog-box-esvaziar-ficha__p">Tem certeza de que deseja esvaziar a ficha?</p>
                 <div class=dialog-box-esvaziar-ficha__svg-container>
                     <svg style=width:40px;height:40px>
                         <linearGradient id=meuGradiente x1=0% x2=0% y1=0% y2=100%>
@@ -382,9 +382,10 @@
                         <polygon fill=url(#meuGradiente) points="20,0 40,40, 0,40" stroke=#333 stroke-width=1></polygon>
                         <text style=font-weight:700;font-size:28px x=15.335 y=35.5>!</text>
                     </svg>
-                    <p class="dialog-box-esvaziar-ficha__p--last">Esta acção não pode ser desfeita.</p>
+                    <p class="dialog-box-esvaziar-ficha__p dialog-box-esvaziar-ficha__p--alerta">Esta acção não pode ser desfeita.</p>
                 </div>
-                <h4 class="dialog-box-esvaziar-ficha__titulo --fw-700">Inclusive os campos de:</h4>
+                <h4 class="dialog-box-esvaziar-ficha__titulo dialog-box-esvaziar-ficha__titulo--no-margin-b --fw-700">Inclusive os campos de:</h4>
+                <p class="dialog-box-esvaziar-ficha__p dialog-box-esvaziar-ficha__p--fs-small">Desmarque os que não deseja esvaziar.</p>
                 <ul class=dialog-box-esvaziar-ficha__ul-dados-adicionais>
                     <li>
                         <input type=checkbox checked id="checkbox-prov" data-for=input-provincia>
@@ -506,7 +507,7 @@
                     <summary class="details__summary">Algumas células ficaram vermelhas</summary>
                     <p>Uma célula adopta um fundo vermelho como sinal de alerta para indicar que o valor contido nela, excedeu a largura fixa da célula e, por isso, os últimos algarismos estão omissos, ou seja, estão fora da área visível da célula.</p>
                 </details>
-                <p class="artigo-ajuda__p--contactar-suporte">Se os tópicos acima não cobrem as suas dúvidas, pode ainda solicitar suporte ao Desenvolvedor pelos seguintes endereços: <a href="mailto:quinamine.aderitofelix@gmail.com?subject=Totalizador%20de%20Resumo%20Trimestral%20de%20APSS%2FPP">Email</a> e/ou <a href="https://wa.me/258846709901/?text=Olá%2C+Quinamine!+Sobre+o+*totalizador+de+resumo+trimestral+de+APSS%2FPP*%2C+tenho+a+seguinte+dúvida%3A%20">WhatsApp</a>.</p>
+                <p class="artigo-ajuda__p--contactar-suporte">Se os tópicos acima não cobrem as suas dúvidas, pode ainda solicitar suporte ao Desenvolvedor através do endereço electrónico <a href="mailto:quinamine.aderitofelix@gmail.com?subject=Totalizador%20de%20Resumo%20Trimestral%20de%20APSS%2FPP">quinamine.aderitofelix@gmail.com</a> ou pelo <a href="https://wa.me/258846709901/?text=Olá%2C+Quinamine!+Sobre+o+*totalizador+de+resumo+trimestral+de+APSS%2FPP*%2C+tenho+a+seguinte+dúvida%3A%20">WhatsApp</a>.</p>
                 <button class="artigo__btn-x artigo__btn-x--fechar-ajuda" title="Fechar">&times;</button>
             </article>
         </section>
@@ -515,6 +516,7 @@
                 <nav class=footer__nav>
                     <h4 class="footer__nav__title">Hiperligações para outros serviços afins</h4>
                     <ul>
+                        <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-its/index.html class="footer__nav__link">Totalizador de Resumo Mensal de ITS</a></li>
                         <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-doenca-avancada-por-hiv/index.html class="footer__nav__link">Totalizador de Resumo Mensal de Doença Avançada por HIV</a></li>
                         <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-prep/index.html class="footer__nav__link">Totalizador de Resumo Mensal de PrEP</a></li>
                         <li><a href=https://quinamine.github.io/totalizador-de-resumo-mensal-de-rastreio-e-investigacao-de-tb-contactos-e-inicio-de-tpt/index.html class="footer__nav__link">Totalizador de Resumo Mensal de Rastreio e Investigação de TB, Contactos e Início de TPT</a></li>
@@ -547,7 +549,7 @@
                 <p class="footer__p footer__p--created-by">Criado com atenção e <span class="footer__p__heart">❤</span> por <a href=https://quinamine.github.io/aderito-felix-quinamine/index.html title="Acessar biografia &raquo;">Adérito Félix Quinamine</a> | ©&nbsp;<span class="footer__current-year"></span> Totalizador de Resumo Trimestral de APSS/PP</p>
                 <a href=#root class=footer__link--back-to-top>Rolar para o topo</a>
             </div>
-            <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2024-03-04">04/03/2024</time> Última actualização: Fevereiro/2025.</p>
+            <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2024-03-04">04/03/2024</time> Última actualização: Maio/2025.</p>
         </footer>
         <div class="desfoque"></div>
         <script src="fisiologia/festasfelizes.js"></script>

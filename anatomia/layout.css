@@ -110,7 +110,6 @@
         display: initial;
     }
 }
-/* MENU */
 .header__menu__ul {
     width: 100%;
     display: flex;
@@ -168,7 +167,6 @@
         display: none;
     }
 }
-/* MAIN */
 @media screen and (max-width: 1303px) {
     #main {
         max-width: 100%;
@@ -223,7 +221,6 @@
 .obs__input:focus {
     outline: 0;
 }
-/* Footer */
 .footer {
     font-size: 12px;
     background-color: var(--cor-do-rodape);
@@ -493,10 +490,10 @@
     left: 15px;
 }
 .artigo-ajuda__p--contactar-suporte {
-    --bg-color: #f5f5f5;
+    --gray--light: #f5f5f5;
     font-size: 12px;
     margin-top: 20px;
-    background-color: var(--bg-color);
+    background-color: var(--gray--light);
     padding: 15px;
 }
 .artigo__lista {
@@ -566,7 +563,6 @@ details[open] .details__summary {
 .artigo__details--salvar-ficha-como-pdf li {
     line-height: 2;
 }
-/* Caixas de diálogo */
 .dialog-box-default {
     width: 100%;
     max-width: var(--layout-width);
@@ -762,11 +758,20 @@ details[open] .details__summary {
     font-size: 14px;
     margin-bottom: 10px;
 }
-.dialog-box-esvaziar-ficha__p--first {
+.dialog-box-esvaziar-ficha__titulo--no-margin-b {
+    margin-bottom: 0;
+}
+.dialog-box-esvaziar-ficha__p {
     margin-bottom: 10px;
 }
-.dialog-box-esvaziar-ficha__p--last {
+.dialog-box-esvaziar-ficha__p--alerta {
     margin-top: 10px;
+    margin-bottom: 0;
+}
+.dialog-box-esvaziar-ficha__p--fs-small {
+    font-size: 11px;
+    color: var(--gray);
+    --gray: #787878;
 }
 .dialog-box-esvaziar-ficha__ul-dados-adicionais {
     max-height: 164px;
@@ -823,7 +828,7 @@ details[open] .details__summary {
 .dialog-box-esvaziar-ficha__btn--confirmar:hover {
     background-color: var(--fullred)
 }
-.desfoque.on {
+.desfoque.--on {
     width: 100vw;
     height: 100vh;
     position: fixed;
