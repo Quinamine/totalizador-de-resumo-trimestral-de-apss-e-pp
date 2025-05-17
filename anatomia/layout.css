@@ -569,7 +569,7 @@ details[open] .details__summary {
     font-size: 13px;
     line-height: 1.5;
     border: 1px solid var(--gray);
-    background: var(--gray--light);
+    background-color: var(--gray--light);
     box-shadow: 0 2px 8px var(--gray--5);
     position: fixed;
     right: calc(50vw - (var(--layout-width) + 15px) / 2);
@@ -611,7 +611,7 @@ details[open] .details__summary {
     text-overflow: ellipsis;
 }
 .dialog-box-default__btn-container {
-    background: var(--gray--light);
+    background-color: var(--gray--light);
     padding: 8px;
     border-top: 1px solid var(--gray--d)
 }
@@ -620,19 +620,22 @@ details[open] .details__summary {
     min-height: 60px;
 }
 .dialog-box-default__btn {
+    --gray--light:#e1e1e1;
+    --gray--a:#adadad;
     min-width: 130px;
     margin: auto;
     padding: 5px;
-    border: 1px solid var(--gray--c);
+    background-color: var(--gray--light);
+    border: 1px solid var(--gray--a);
     font-size: 13px;
     display: block;
     transition-duration: .4s;
     color: var(--cor-de-texto);
 }
 .dialog-box-default__btn:hover {
+    --cor-de-realce:#e5f1fb;
     background-color: var(--cor-de-realce);
     border-color: var(--cor-de-link);
-    color: var(--cor-de-texto);
 }
 .dialog-box-default__output-autoclose-loop {
     display: inline-block;
@@ -715,7 +718,7 @@ details[open] .details__summary {
     line-height: 1.5;
     padding: 20px;
     border-radius: 10px;
-    background: var(--yt);
+    background-color: var(--yt);
     top: calc(50vh - 444px / 2);
     right: calc(50vw - 375px / 2);
     z-index: 999;
