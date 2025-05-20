@@ -80,7 +80,6 @@
 .ficha__linha-de-endereco input::-webkit-calendar-picker-indicator {
     display: none !important;
 }
-/* Cabecalho da ficha */
 .ficha__body__header {
     display: grid;
     grid-template-columns: 40px 300px repeat(2, 193px) 120px;
@@ -147,7 +146,6 @@
     display: grid;
     grid-template-rows: calc(155px / 3) calc(155px - 155px / 3);
 }
-/* Corpo da ficha */
 .ficha__body__grid-template-cols-10 {
     display: grid;
     grid-template-columns: 95px 40px 300px repeat(6, calc(193px / 3)) 120px;
@@ -179,8 +177,6 @@
     letter-spacing: .5px;
     text-align: center;
 }
-/* Coluna de linhas e de indicadores e inputs*/
-/* 120px 230px 120px 330px;*/
 .ficha__col-de-nums-de-linhas,
 .ficha__col-de-indicadores,
 .ficha__col-de-inputs {
@@ -232,7 +228,6 @@
     background-color: var(--fullblack);
     color: var(--yt)
 }
-/* Rodape da ficha */
 .ficha__rodape {
     display: grid;
     grid-template-columns: 364px 275px 1fr;
