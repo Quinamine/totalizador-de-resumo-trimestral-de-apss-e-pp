@@ -33,23 +33,23 @@
         </script>
         <noscript>O seu navegador está com o JavaScript desabilitado e isso bloqueia as funcionalidades do totalizador. Habilite-o nas configurações do navegador e recarregue a página.</noscript>
     </head>
-     <body id="body" class="body-com-topo-propaganda" ontouchstart="">
-        <div class="topo-propaganda topo-propaganda--off topo-propaganda--festas-felizes --no-print">
-            <div class="topo-propaganda__row">
-                <img src="imagens/arvore-de-natal.png" alt="Árvore de Natal" class="topo-propaganda__img">
-                <p class="topo-propaganda__paragrafo"></p>
-                <button class="topo-propaganda__btn topo-propaganda__btn--background-tom-de-red" title="Fechar">&times;</button>
+     <body id="body" class="body-com-topo-info" ontouchstart="">
+        <div class="topo-info topo-info--off topo-info--festas-felizes --no-print">
+            <div class="topo-info__row">
+                <img src="imagens/arvore-de-natal.png" alt="Árvore de Natal" class="topo-info__img">
+                <p class="topo-info__paragrafo"></p>
+                <button class="topo-info__btn topo-info__btn--background-tom-de-red" title="Fechar">&times;</button>
             </div>
         </div>
-        <div class="topo-propaganda --no-print">
-            <div class="topo-propaganda__row">
-                <a href=https://quinamine.github.io/aderito-felix-quinamine/paginas/portfolio.html class="topo-propaganda__link">Neste link estão todos os totalizadores de resumos mensais e trimestrais. <span class="topo-propaganda__link__trecho-acessar">Acessar&nbsp;&raquo;<span></a></a>
-                <button class="topo-propaganda__btn" title="Fechar">&times;</button>
+        <div class="topo-info --no-print">
+            <div class="topo-info__row">
+                <a href=https://quinamine.github.io/aderito-felix-quinamine/paginas/portfolio.html class="topo-info__link info-content info-content--no-shadow">Neste link estão todos os totalizadores de resumos mensais e trimestrais. <span class="topo-info__link__trecho-acessar">Acessar&nbsp;&raquo;<span></a></a>
+                <button class="topo-info__btn" title="Fechar">&times;</button>
             </div>
         </div>
-        <header class="header --no-print">
+        <header id="header" class="--no-print">
             <div class="layout-row layout-row--of-header layout-row--no-padding">
-                <a href=index.html id="logo">Totalizador de Resumo <span class="logo__snippet--hide-on-screen-til-359px">Trimestral</span> de APSS/PP</a>
+                <a href=index.html id="logo">Totalizador de Resumo Trimestral de APSS/PP</a>
                 <div role="navigation" class="header__menu --display-flex-y-center">
                     <ul class="header__menu__ul --display-flex-y-center">
                         <li class="header__menu__li header__menu__li--realcar-totais">
@@ -64,20 +64,21 @@
                         </li>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--imprimir">
-                                <span class="header__menu__item--hide-on-mobile --cursor-pointer">Imprimir</span>
-                                <span class="header__menu__item--hide-on-desktop --cursor-pointer">Salvar&nbsp;como&nbsp;PDF</span>
+                                <span class="header__menu__btn-text --hide-on-mobile --cursor-pointer">Imprimir</span>
+                                <span class="header__menu__btn-text --hide-on-desktop --cursor-pointer">Salvar&nbsp;como&nbsp;PDF</span>
                             </button>
                         </li>
-                        <li class="header__menu__li header__menu__item--hide-on-mobile">
+                        <li class="header__menu__li header__menu__btn-text --hide-on-mobile">
                             <button class="header__menu__btn header__menu__btn--sobre">Sobre</button>
                         </li>
                         <li class="header__menu__li">
                             <button class="header__menu__btn header__menu__btn--ajuda">Ajuda</button>
                         </li>
-                        <li class="header__menu__li header__menu__item--hide-on-desktop">
-                            <button class="header__menu__btn header__menu__btn--partilhar">Partilhar...</button>
-                        </li>
                     </ul>
+					<div class="tooltip tooltip--menu-ajuda --on">
+                        <div class="tooltip__arrow tooltip__arrow--menu-ajuda"></div>
+                        <p class="tooltip__tip">Acesse este artigo para saber mais sobre as funcionalidades do totalizador<span class="--hide-on-mobile">, inclusive "<b>salvar a ficha como PDF</b>"</span>.</p>
+                    </div>
                 </div>
             </div>
         </header>
@@ -335,6 +336,27 @@
                 </footer>
                 <p class="ficha__nota-normas-de-preenchimento"><strong>NOTA:</strong> Normas de preenchimento do Resumo Trimestral no verso.</p>
             </div>
+            <button class="main__btn-fixed main__btn-fixed--light main__btn-fixed--share --no-print" title="Partilhar totalizador">
+                <svg style="width: 25px; height: 20px;">
+                    <circle r="2.5" cx="5" cy="50%" fill="transparent" stroke="var(--cor-de-texto)" stroke-width="1"></circle>
+                    <circle r="2.5" cx="20" cy="5" fill="transparent" stroke="var(--cor-de-texto)" stroke-width="1"></circle>
+                    <circle  r="2.5" cx="20" cy="15" fill="transparent" stroke="var(--cor-de-texto)" stroke-width="1"></circle>
+                    <line stroke="var(--cor-de-texto)" stroke-width="1" x1="7.5" x2="17.5" y1="9" y2="5"></line>
+                    <line stroke="var(--cor-de-texto)" stroke-width="1" x1="7.5" x2="17.5" y1="11" y2="15"></line>
+                </svg>
+            </button>
+            <button class="main__btn-fixed main__btn-fixed--emptycell-equals-zero --no-print">
+                <svg style="width: 9px; height: 9px; border: 1px solid var(--gray-d); margin: 0;">
+                    <rect width="9" height="9" fill="var(--yt)" ></rect>
+                </svg>=<svg style="width: 9px; height: 9px; border: 1px solid var(--gray-d); margin: 0;">
+                    <rect width="9" height="9" fill="var(--yt)" ></rect>
+                    <circle r="3" cx="4.5" cy="4.5"  fill="transparent" stroke="var(--cor-de-texto)" stroke-width="1"></circle>
+                </svg>
+            </button>
+            <div class="tooltip tooltip--vazioigualzero --no-print">
+                <div class="tooltip__arrow"></div>
+                <p class="tooltip__tip">Este botão é um atalho, use-o para preencher células vazias com o valor "<b>0</b>".</p>
+            </div>
             <div class="layout-row layout-row--obs layout-row--no-padding">
                 <span class="obs__label --fw-700">Observações:</span>
                 <p contenteditable="true" id="input-obs" class="obs__input"></p>
@@ -445,7 +467,7 @@
                     <li>Ter colhido os dados de todos os indicadores da ficha nas respectivas fontes primárias (livro(s) de registo diário das actividades de apoio psicossocial e prevenção positiva) da sua Unidade Sanitária;</li>
                     <li>E por fim, preencher os dados nas células correspondentes quanto ao indicador e as outras variáveis e consequentemente os respectivos totais são, em tempo real, correcta e automaticamente calculados.</li>
                 </ul>
-                <p class="artigo__p--destaque">O totalizador garante um resumo trimestral correctamente totalizado, porém, um resumo trimestral de qualidade não se limita apenas à uma correcta totalização. Outros factores, independentes do totalizador, como preenchimento correcto e legível dos livros de registo, colheita de dados abrangente a todas as fontes primárias com informação do trimestre em reporte, cruzamento e concordância dos dados, entre outros, contribuem sobremaneira para a qualidade de um resumo trimestral.</p>
+                <p class="info-content">O totalizador garante um resumo trimestral correctamente totalizado, porém, um resumo trimestral de qualidade não se limita apenas à uma correcta totalização. Outros factores, independentes do totalizador, como preenchimento correcto e legível dos livros de registo, colheita de dados abrangente a todas as fontes primárias com informação do trimestre em reporte, cruzamento e concordância dos dados, entre outros, contribuem sobremaneira para a qualidade de um resumo trimestral.</p>
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Qual é o destino dos dados que eu insiro?</h3>
                 <p>São guardados no seu celular ou computador, por meio de um recurso chamado <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API" target="_blank">Web Storage</a> e você tem total controle sobre os dados, podendo mantê-los ou apagá-los por meio da opção "<b>Esvaziar ficha</b>" no menu do totalizador ou excluindo os dados de navegação do seu navegador.</p>
                 <h3 class="artigo__titulo artigo__titulo--nivel-2">Vantagens do totalizador</h3>
@@ -468,7 +490,7 @@
                 <details class="artigo__details">
                     <summary class="details__summary">Realçar totais</summary>
                     <p>Adiciona cor de fundo amarela às células dos totais. Essas têm o acesso interdito e a funcionalidade de realçá-las, permite distinguí-las facilmente das outras células. Muito útil em celulares.</p>
-                    <p class="artigo__p--destaque --sem-sombra">A cor de realce de fundo  das células não afecta a impressão.</p>
+                    <p class="info-content info-content--no-shadow">A cor de realce de fundo  das células não afecta a impressão.</p>
                 </details>
                 <details class="artigo__details">
                      <summary class="details__summary">Ir para a linha...</summary>
@@ -507,11 +529,18 @@
                     <summary class="details__summary">Algumas células ficaram vermelhas</summary>
                     <p>Uma célula adopta um fundo vermelho como sinal de alerta para indicar que o valor contido nela, excedeu a largura fixa da célula e, por isso, os últimos algarismos estão omissos, ou seja, estão fora da área visível da célula.</p>
                 </details>
-                <p class="artigo-ajuda__p--contactar-suporte">Se os tópicos acima não cobrem as suas dúvidas, pode ainda solicitar suporte ao desenvolvedor através do endereço electrónico <a href="mailto:quinamine.aderitofelix@gmail.com?subject=Totalizador%20de%20Resumo%20Trimestral%20de%20APSS%2FPP">quinamine.aderitofelix@gmail.com</a> ou pelo <a href="https://wa.me/258846709901/?text=Olá%2C+Quinamine!+Sobre+o+*totalizador+de+resumo+trimestral+de+APSS%2FPP*%2C+tenho+a+seguinte+dúvida%3A%20">WhatsApp</a>.</p>
+                <details class="artigo__details artigo__details--border-b artigo__details--celulas-vazias-igual-zero">
+                    <summary class="details__summary">Atalho "Célula vazia igual a zero"</summary>
+                    <p>Se for preencher várias células com o valor "<b>0</b>", pode fazê-lo de forma simples e rápida clicando no botão ilustrado abaixo. O atalho funciona para células vazias, portanto, deverá preencher manualmente as células cujos valores dos indicadores são diferentes de zero, e ignorar as que preencherá com "<b>0</b>" através do botão e/ou atalho.</p>
+                    <figure class="details__moldura">
+                        <img src="imagens/atalho-celula-vazia-igual-a-zero.png" alt="Atalho 'Célula vazia igual a zero'" class="artigo__img" />
+                    </figure>
+                </details>
+                <p class="artigo-ajuda__p--contactar-suporte">Se os tópicos acima não cobrem as suas dúvidas, pode ainda solicitar suporte ao desenvolvedor através do endereço electrónico <a href="mailto:quinamine.aderitofelix@gmail.com?subject=Totalizador%20de%20Resumo%20Trimestral%20de%20APSS%2FPP">quinamine.aderitofelix@gmail.com</a> ou através do <a href="https://wa.me/258846709901/?text=Olá%2C+Quinamine!+Sobre+o+*totalizador+de+resumo+trimestral+de+APSS%2FPP*%2C+tenho+a+seguinte+dúvida%3A%20">WhatsApp</a>.</p>
                 <button class="artigo__btn-x artigo__btn-x--fechar-ajuda" title="Fechar">&times;</button>
             </article>
         </section>
-        <footer class="footer --no-print">
+        <footer id="footer" class="--no-print">
             <div class="layout-row footer__row">
                 <nav class=footer__nav>
                     <h4 class="footer__nav__title">Hiperligações para outros serviços afins</h4>
@@ -549,7 +578,7 @@
                 <p class="footer__p footer__p--created-by">Criado com atenção e <span class="footer__p__heart">❤</span> por <a href=https://quinamine.github.io/aderito-felix-quinamine/index.html title="Acessar biografia &raquo;">Adérito Félix Quinamine</a> | ©&nbsp;<span class="footer__current-year"></span> Totalizador de Resumo Trimestral de APSS/PP</p>
                 <a href=#root class=footer__link--back-to-top>Rolar para o topo</a>
             </div>
-            <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2024-03-04">04/03/2024</time> Última actualização: Maio/2025.</p>
+            <p class="footer__p footer__p--available-since">Disponível desde <time datetime="2024-03-04">04/03/2024</time> Última actualização: Junho/2025.</p>
         </footer>
         <div class="desfoque"></div>
         <script src="fisiologia/festasfelizes.js"></script>

@@ -94,7 +94,7 @@
         background-color: var(--yt);
         z-index: 333;
     }
-    .body-com-topo-propaganda .ficha__body__header {
+    .body-com-topo-info .ficha__body__header {
         top: 36px;
     }
 }
@@ -225,7 +225,7 @@
     color: var(--yt)
 }
 .input--bg-color-dark {
-    background-color: var(--fullblack);
+    background-color: var(--black);
     color: var(--yt)
 }
 .ficha__rodape {

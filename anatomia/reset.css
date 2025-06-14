@@ -77,6 +77,6 @@ img {
     max-width: 100%;
 }
 ::selection {
-    background-color: var(--gray--d);
-    color: var(--fullblack)
+    background-color: var(--gray-d);
+    color: var(--black)
 }
