@@ -105,7 +105,10 @@ const menu = {
     imprimirFicha() {
         const comentarios = document.querySelector(".obs__input");
         comentarios.textContent === "" ? comentarios.parentElement.classList.add("--no-print") : comentarios.parentElement.classList.remove("--no-print");
-        window.print()
+        const urlOutput = document.querySelector(".ficha__url-pub");
+        const url = location.href;
+        urlOutput.innerHTML = `Totalizado por computador. Totalizador disponível em: <span class="ficha__url-pub__link">${url}</span>`;
+        window.print();
     },
     abrirArtigo(artigo) {
         const artigoSobre = document.querySelector(".artigo--sobre");
