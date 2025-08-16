@@ -465,12 +465,28 @@
     position: absolute;
     left: 15px;
 }
-.artigo-ajuda__p--contactar-suporte {
+.artigo-ajuda__p--smaller {
     --gray-light: #f5f5f5;
     font-size: 12px;
     margin-top: 20px;
     background-color: var(--gray-light);
     padding: 15px;
+}
+.artigo-ajuda__p-tooltip {
+    background-color: var(--cor-de-realce);
+    position: relative;
+    font-weight: 700;
+    color: var(--gray-five);
+}
+.artigo-ajuda__p-tooltip__arrow {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 9px solid transparent;
+    border-top-color: var(--cor-de-realce);
+    position: absolute;
+    bottom: -17px;
+    left: 26px;
 }
 .artigo__lista {
     margin-left: 30px;
@@ -747,9 +763,13 @@ details[open] .details__summary {
     margin-top: 10px;
     margin-bottom: 0;
 }
-.dialog-box-esvaziar-ficha__p--fs-small {
+.dialog-box-esvaziar-ficha__p-tooltip {
+    display: inline-block;
     font-size: 12px;
-    color: var(--gray-five);
+    padding: 6px;
+    background-color: var(--cor-de-realce);
+    position: relative;
+    border-radius: 12px;
 }
 .dialog-box-esvaziar-ficha__ul-dados-adicionais {
     max-height: 164px;
@@ -853,11 +873,7 @@ details[open] .details__summary {
     padding-bottom: 1px;
     top: calc(50% - 19px / 2);
 }
-.topo-info__link__trecho-acessar {
-    text-decoration: underline;
-    cursor: pointer;
-}
-@media screen and (max-width: 326px) {
+@media screen and (max-width: 345px) {
     .topo-info__link__trecho-acessar {
         display: none;
     }

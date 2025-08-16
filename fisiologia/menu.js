@@ -114,7 +114,11 @@ const menu = {
         if(icPreenchidas > 0) {totalizadoPor = "Totalizado por computador. "} 
         else {totalizadoPor = "";}
         const urlOutput = document.querySelector(".ficha__url-pub");
-        const url = location.href;
+        let url = location.href;
+        if(window.location.protocol == "file:") {
+            url = url.split("/totalizador-de-")[1];
+            url = `https://quinamine.github.io/totalizador-de-${url}`;
+        }
         const title = document.title;
         urlOutput.innerHTML = `${totalizadoPor}${title} disponível em: <span class="ficha__url-pub__link">${url}</span>`;
         window.print();

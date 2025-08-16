@@ -660,7 +660,7 @@ const moz = {
         }
     },
     maputocidade: {
-        distritos:  ["Kampfumo", "Kamaxakene", "kamavota", "Kamabukwana", "Kanyaka", "Katembe", "Nlhamankulu"],
+        distritos:  ["Kampfumo", "Kamaxakene", "Kamavota", "Kamabukwana", "Kanyaka", "Katembe", "Nlhamankulu"],
         kampfumo: {
             us: ["CS Alto Maé", "CS Malhangalene", "CS Maxaquene", "CS Polana Cimento", "CS Porto", "HC Maputo", "HM Maputo", "PS Nº 2 Tribunal"],
             codigos: ["01110106", "01110109", "01110107", "01110110", "01110111", "01110101", "01110102", "01110113"]
