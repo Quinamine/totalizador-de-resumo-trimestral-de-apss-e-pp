@@ -9,7 +9,7 @@ O **Totalizador de Resumo Trimestral de APSS/PP** é um serviço online gratuito
 
 * Auxiliar os profissionais de saúde na totalização do resumo trimestral de APSS/PP com exatidão e prontidão;
 
-* Minimizar possíveis erros de totalização (por exemplo, somar involuntariamente células não correspondentes ou registar o total da linha A, na linha B);
+* Minimizar possíveis erros de totalização (por exemplo, somar involuntariamente células não correspondentes ou registar o total da linha "A", na linha "B");
 
 * Expandir o acesso à ficha de resumo trimestral de APSS/PP.
 
