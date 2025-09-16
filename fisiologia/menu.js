@@ -167,7 +167,7 @@ function eventos() {
     irPara__btnIr.addEventListener("click", () => { 
         const inputNumLinha = document.querySelector(".dialog-box-ir-para__input-linha");
         if(inputNumLinha.value === "") {
-            alertarSobre("Por favor, preencha o campo com o número da linha para a qual deseja rolar.");
+            alertarSobre("Preencha o campo com o número da linha para a qual deseja rolar.");
             inputNumLinha.focus();
         } else {menu.irParaLinha().goToLn(inputNumLinha.value);}
          
